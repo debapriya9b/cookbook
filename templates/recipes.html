@@ -1,15 +1,11 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        
-    </head>
-    <body>
+{% extends 'base.html' %}
+{% block content %}
         {% for recipe in recipes %}
             {{recipe.recipe_name}}
             {{recipe.recipe_description}}
             {{recipe.recipe_ingredients}}
             {{recipe.recipe_procedure}}
         {% endfor %}
+{% endblock %}
         
-    </body>
-</html>
+    

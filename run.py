@@ -18,7 +18,7 @@ def home():
     
 @app.route('/get_recipes')
 def get_recipes():
-    return render_template('recipes.html')
+    return render_template('recipes.html', recipes=mongo.db.recipes.find())
 
 
 if __name__=='__main__':

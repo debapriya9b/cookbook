@@ -3,6 +3,17 @@
         {% for recipe in recipes %}
             <h4>{{recipe.recipe_name}}</h4>
             <p>Ingredients: {{recipe.recipe_ingredients}}</p>
+            <table class="striped Josefin">
+                            <tbody>
+                                <!--<tr class="light-grayish-cyan">-->
+                                 {% for step in recipe.recipe_ingredients %}
+                                <tr>
+                                    <td>#{{ loop.index }}</td>
+                                    <td>{{ step }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
         {% endfor %}
 {% endblock content %}
         

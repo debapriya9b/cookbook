@@ -9,12 +9,17 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    
+<!-- Customised Title for every page-->
 
-    <title>Document</title>
+  {% if title %}
+     <title>Bake'n'Make - {{ title }}</title>
+  {% else %}
+    <title>Bake'n'Make</title>
+  {% endif %}
 </head>
 
 <body>
-    <h1>Recipe</h1>
     {% block content %} {% endblock %}
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

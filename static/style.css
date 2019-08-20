@@ -6,5 +6,22 @@
 
 body {
   height: 100vh;
-  background: #ffffff;
+}
+
+.section-details{
+  padding-top: 35px;
+  margin-top: 35px;
+}
+
+.sidebar-details{
+  margin-top: 15px;  
+}
+
+.p a{
+    color:#000000;
+}
+.sidebar-item:focus, .sidebar-item:hover {
+    color: #000000;
+    text-decoration: none;
+    background-color: #ffffff;
 }

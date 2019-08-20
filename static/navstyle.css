@@ -1,0 +1,110 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Change this breakpoint if you change the breakpoint of the navbar */
+
+@media (min-width: 992px) {
+  .animate {
+    animation-duration: 0.3s;
+    -webkit-animation-duration: 0.3s;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+  100% {
+    transform:translateY(0rem);
+    opacity: 1;
+  }
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes slideIn {
+  0% {
+    -webkit-transform: transform;
+    -webkit-opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    -webkit-opacity: 1;
+  }
+  0% {
+    -webkit-transform: translateY(1rem);
+    -webkit-opacity: 0;
+  }
+}
+
+.slideIn {
+  -webkit-animation-name: slideIn;
+  animation-name: slideIn;
+}
+
+
+
+/*********************************************/
+/*Sidebar*/
+
+.stage{
+  height: 350px;
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.p{
+  font-size: 35px;
+  text-align: center;
+  margin-top: 0;
+  cursor: pointer;
+  width: 100%;
+  background: #78FED6;
+  border-radius: 10px;
+  font-family: Century Gothic;
+  letter-spacing: 5px;
+}
+.div{
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  width: 200px;
+  height: 40px;
+  margin-top: 4%;
+ transition-duration: 0.2s;
+
+}
+.p:hover{
+  background: white;
+  color: black;
+}
+.div:nth-child(odd){
+  transform: perspective(300px) rotateY(45deg);
+  box-shadow: -2px 2px 7px gray;
+}
+.div:nth-child(even){
+  transform: perspective(300px) rotateY(-45deg);
+    box-shadow: 2px 2px 7px gray;
+}
+.div:hover{
+  transform: rotateY(0);
+  background: white;
+  color: black;
+  box-shadow: 0px 0px 0px;
+}
+
+
+
+
+
+
+
+

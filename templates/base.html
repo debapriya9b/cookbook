@@ -5,9 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  
-  
-   <!-- Bootstrap CSS -->
+
+
+  <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
   <!-- Links for Materializecss-->
@@ -16,14 +16,14 @@
 
   <!-- Links for Customised CSS-->
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css" />
-  
+
 
   <!-- Customised Title for every page-->
 
   {% if title %}
-  <title>Foodie Therapy - {{ title }}</title>
+  <title>CookBook - {{ title }}</title>
   {% else %}
-  <title>Foodie Therapy</title>
+  <title>CookBook</title>
   {% endif %}
 </head>
 
@@ -33,55 +33,62 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-4">
-<div id="mySidepanel" class="sidepanel">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-  <ul>
-  <li><a href="#">All Recipes</a>
-  <ul>
-    <div class="sidebar-sublist">
-  <a href="#">Starters</a>
-  <a href="#">Main Courses</a>
-  <a href="#">Snacks</a>
-  <a href="#">Easy Dinners</a>
-  <a href="#">Desserts</a>
-  <a href="#">Drinks</a>
+        <div id="mySidepanel" class="sidepanel">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+          <ul>
+            <li><a href="#">All Recipes</a>
+              <ul>
+                <div class="sidebar-sublist">
+                  <a href="#">Starters</a>
+                  <a href="#">Main Courses</a>
+                  <a href="#">Snacks</a>
+                  <a href="#">Easy Dinners</a>
+                  <a href="#">Desserts</a>
+                  <a href="#">Drinks</a>
+                </div>
+              </ul>
+            </li>
+            <li><a href="#">Add Recipe</a></li>
+            <li><a href="#">Helpers</a></li>
+
+          </ul>
+        </div>
+
+        <button class="openbtn" onclick="openNav()">CookBook ☰</button>
+      </div>
+      <div class="col-8">
+        <div class="navbar-nav">
+          <ul class="nav justify-content-end">
+          <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="/register">Register</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
-  </ul>
-  </li>
-  <li><a href="#">Add Recipe</a></li>
-  <li><a href="#">Helpers</a></li>
-  
-  </ul>
-</div>
 
-<button class="openbtn" onclick="openNav()">☰ Foodie Therapy</button>  
-</div>
-<div class="col-8">register</div>
-</div>
-</div>
+  <!-- Navbar:Floating Action Button-->
 
-<!-- Navbar:Floating Action Button-->
-
-<div class="fixed-action-btn">
-  <a class="btn-floating btn-large red">
+  <div class="fixed-action-btn">
+    <a class="btn-floating btn-large red">
     <i class="large material-icons">dehaze</i>
   </a>
-  <ul>
-    <li><a class="btn-floating red"><i class="material-icons">home</i></a></li>
-    <li><a class="btn-floating yellow darken-1"><i class="material-icons">restaurant_menu</i></a></li>
-    <li><a class="btn-floating blue"><i class="material-icons">account_circle</i></a></li>
-    <li><a class="btn-floating green"><i class="material-icons">add</i></a></li>
-    <li><a class="btn-floating teal darken-4"><i class="material-icons">help</i></a></li>
-  </ul>
-</div>
+    <ul>
+      <li><a class="btn-floating red"><i class="material-icons">home</i></a></li>
+      <li><a class="btn-floating yellow darken-1"><i class="material-icons">restaurant_menu</i></a></li>
+      <li><a class="btn-floating blue"><i class="material-icons">account_circle</i></a></li>
+      <li><a class="btn-floating green"><i class="material-icons">add</i></a></li>
+      <li><a class="btn-floating teal darken-4"><i class="material-icons">help</i></a></li>
+    </ul>
+  </div>
 
 
 
 
 
-      <div class="container-fluid">
-       {% block content %} {% endblock %}
-    </div>
+  <div class="container-fluid">
+    {% block content %} {% endblock %}
+  </div>
 
   <!-- JS,jQuery Links for Materializecss-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -92,21 +99,19 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script>
+  <script>
+    function openNav() {
+      document.getElementById("mySidepanel").style.width = "250px";
+    }
 
-function openNav() {
-  document.getElementById("mySidepanel").style.width = "250px";
-}
+    function closeNav() {
+      document.getElementById("mySidepanel").style.width = "0";
+    }
 
-function closeNav() {
-  document.getElementById("mySidepanel").style.width = "0";
-}
-
-$(document).ready(function(){
-    $('.fixed-action-btn').floatingActionButton();
-  });
-
-</script>
+    $(document).ready(function() {
+      $('.fixed-action-btn').floatingActionButton();
+    });
+  </script>
 
 </body>
 

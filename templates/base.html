@@ -21,15 +21,35 @@
   <!-- Customised Title for every page-->
 
   {% if title %}
-  <title>Bake'n'Make - {{ title }}</title>
+  <title>Foodie Therapy - {{ title }}</title>
   {% else %}
-  <title>Bake'n'Make</title>
+  <title>Foodie Therapy</title>
   {% endif %}
 </head>
 
 <body>
 
   <!-- Navbar-->
+<div id="mySidepanel" class="sidepanel">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <ul>
+  <li><a href="#">All Recipes</a>
+  <ul>
+  <a href="#">Starters</a>
+  <a href="#">Main Courses</a>
+  <a href="#">Snaks</a>
+  <a href="#">Easy Dinners</a>
+  <a href="#">Desserts</a>
+  <a href="#">Drinks</a>
+  </ul>
+  </li>
+  <li><a href="#">Add Recipe</a></li>
+  <li><a href="#">Helpers</a></li>
+  
+  </ul>
+</div>
+
+<button class="openbtn" onclick="openNav()">☰ Foodie Therapy</button>  
 
 
       <div class="container-fluid">
@@ -45,7 +65,16 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script>
+function openNav() {
+  document.getElementById("mySidepanel").style.width = "250px";
+}
 
+function closeNav() {
+  document.getElementById("mySidepanel").style.width = "0";
+}
+
+</script>
 
 </body>
 

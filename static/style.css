@@ -51,3 +51,7 @@
 .openbtn:hover {
   background-color:transparent;
 }
+
+.sidebar-sublist{
+  padding-left: 15%;
+}

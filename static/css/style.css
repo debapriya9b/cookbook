@@ -81,4 +81,11 @@
   font-style: italic;
 }
 
-  
+hr{ 
+  height:1.5px;
+  color: red;
+  background-color: #ee6e73;
+  border: none;
+  margin-left: 5%;
+  margin-right: 5%;
+}  

@@ -1,35 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
   <!-- Links for Materializecss-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-
-
   <!-- Links for Customised CSS-->
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css" />
-
-
   <!-- Customised Title for every page-->
-
   {% if title %}
   <title>CookBook - {{ title }}</title>
   {% else %}
   <title>CookBook</title>
   {% endif %}
 </head>
-
 <body>
-
   <!-- Navbar-->
   <div class="container-fluid">
     <div class="row">
@@ -51,25 +40,21 @@
             </li>
             <li><a href="#">Add Recipe</a></li>
             <li><a href="#">Helpers</a></li>
-
           </ul>
         </div>
-
         <button class="openbtn" onclick="openNav()">CookBook ☰</button>
       </div>
       <div class="col-8">
         <div class="navbar-nav">
           <ul class="nav justify-content-end">
-            <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
-            <li class="nav-item"><a class="nav-link" href="/register">Register</a></li>
+          <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="/register">Register</a></li>
           </ul>
         </div>
       </div>
     </div>
   </div>
-
   <!-- Navbar:Floating Action Button-->
-
   <div class="fixed-action-btn">
     <a class="btn-floating btn-large red">
     <i class="large material-icons">dehaze</i>
@@ -82,37 +67,28 @@
       <li><a class="btn-floating teal darken-4"><i class="material-icons">help</i></a></li>
     </ul>
   </div>
-
-
-
-
-
   <div class="container-fluid">
     {% block content %} {% endblock %}
   </div>
-
   <!-- JS,jQuery Links for Materializecss-->
-
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
   <script>
-    $(document).ready(function() {
-      $('.materialboxed').materialbox();
+      $(document).ready(function(){
+      $('.slider').slider();
     });
     // Pause slider
-    $('.slider').slider('pause');
-    // Start slider
-    $('.slider').slider('start');
-    // Next slide
-    $('.slider').slider('next');
-    // Previous slide
-    $('.slider').slider('prev');
+$('.slider').slider('pause');
+// Start slider
+$('.slider').slider('start');
+// Next slide
+$('.slider').slider('next');
+// Previous slide
+$('.slider').slider('prev');
     function openNav() {
       document.getElementById("mySidepanel").style.width = "250px";
     }
@@ -122,12 +98,10 @@
     $(document).ready(function() {
       $('.fixed-action-btn').floatingActionButton();
     });
-    //  document.addEventListener('DOMContentLoaded', function() {
-    //  var elems = document.querySelectorAll('.slider');
-    //  var instances = M.Slider.init(elems, options);
-    //});
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.slider');
+    var instances = M.Slider.init(elems, options);
+  });
   </script>
-
 </body>
-
 </html>

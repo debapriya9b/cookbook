@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
   <!-- Links for Customised CSS-->
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css" />
 
 
   <!-- Customised Title for every page-->
@@ -111,6 +111,12 @@
     $(document).ready(function() {
       $('.fixed-action-btn').floatingActionButton();
     });
+    
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.slider');
+    var instances = M.Slider.init(elems, options);
+  });
+  
   </script>
 
 </body>

@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|EXO:100,200,300,400,500,600,700');
+
+
 *{
 	margin: 0;
 	padding: 0;
@@ -40,12 +43,16 @@
 }
 
 .openbtn {
-  font-size: 20px;
+  font-size: 30px;
   cursor: pointer;
   background-color: transparent;
   color: #111;
   padding: 10px 15px;
   border: none;
+}
+.openbtn span{
+  color:#ee6e73;
+  font-family: 'Just Another Hand', cursive;
 }
 
 .openbtn:hover {
@@ -77,17 +84,16 @@
 
 .brooks {
   position: relative;
-  font-family: 'Sanchez', serif;
   font-size: 2em;
   line-height: 1.5em;
-  font-style: italic;
+  
 }
 
 /*hr tag*/
 
 hr{ 
   height:1.5px;
-  color: red;
+  color: #ee6e73;
   background-color: #ee6e73;
   border: none;
   margin-left: 5%;

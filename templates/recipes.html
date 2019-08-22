@@ -53,6 +53,8 @@
 </div>
 
 <hr>
+<div class="container-fluid">
+<h5>Popular Recipes</h5>
 
         {% for recipe in recipes %}
             <h4>{{recipe.recipe_name}}</h4>
@@ -68,5 +70,6 @@
                                 {% endfor %}
                             </tbody>
                         </table>
+                        </div>
         {% endfor %}
 {% endblock content %}

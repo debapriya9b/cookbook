@@ -73,5 +73,12 @@
   font-weight: bold;
 }
 
+.brooks {
+  position: relative;
+  font-family: 'Sanchez', serif;
+  font-size: 2em;
+  line-height: 1.5em;
+  font-style: italic;
+}
 
-
+  

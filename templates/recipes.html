@@ -10,7 +10,7 @@
           <div class="container-fluid">
             <blockquote class="brooks">
               <div>
-    What is CookBook?
+    What is Cook<span>Book</span>?
     </div>
   </blockquote>
           </div>
@@ -53,23 +53,37 @@
 </div>
 
 <hr>
-<div class="container-fluid">
+<div class="container-fluid popular-recipe-header">
 <h5>Popular Recipes</h5>
 
-        {% for recipe in recipes %}
-            <h4>{{recipe.recipe_name}}</h4>
-            <p>Ingredients: {{recipe.recipe_ingredients}}</p>
-            <table class="striped Josefin">
-                            <tbody>
-                                <!--<tr class="light-grayish-cyan">-->
-                                 {% for step in recipe.recipe_ingredients %}
-                                <tr>
-                                    <td>#{{ loop.index }}</td>
-                                    <td>{{ step }}</td>
-                                </tr>
-                                {% endfor %}
-                            </tbody>
-                        </table>
-                        </div>
+{% for recipe in recipes %}
+
+<div class="container-fluid">
+  <div class="row">
+        <div class="col-sm-6 col-md-3">
+          <div class="card card-alignment-topview">
+            <div class="card-image">
+              <img src="{{ url_for('static', filename='img/burrito-chicken.jpg') }}">
+              <span class="card-title">{{recipe.recipe_name}}</span>
+            </div>
+            <div class="card-content">
+              <p>"{{recipe.recipe_description}}"</p>
+              <p class="recipe-card-quick-details">Views: {{recipe.recipe_views}} | Cooking Time:{{recipe.recipe_time}}</p>
+            </div>
+            <div class="card-action">
+              <a href="#">Full Recipe</a>
+            </div>
+          </div>
+        </div>
+        
+        
+
+      </div>
+</div>
+
+
+
+
+
         {% endfor %}
 {% endblock content %}

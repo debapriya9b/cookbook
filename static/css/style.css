@@ -49,10 +49,11 @@
   color: #111;
   padding: 10px 15px;
   border: none;
+  text-align: left;
 }
 .openbtn span{
   color:#ee6e73;
-  font-family: 'Just Another Hand', cursive;
+  font-family:cursive;
 }
 
 .openbtn:hover {
@@ -86,7 +87,11 @@
   position: relative;
   font-size: 2em;
   line-height: 1.5em;
-  
+}
+
+.brooks span {
+  color:#ee6e73;
+  font-family:cursive;
 }
 
 /*hr tag*/
@@ -99,3 +104,21 @@ hr{
   margin-left: 5%;
   margin-right: 5%;
 }  
+
+.popular-recipe-header h5{
+  text-align: center;
+}
+
+.recipe-card-quick-details{
+  font-size: 12px;
+  margin-top: 5px;
+  color: grey;
+}
+
+.card-alignment-topview{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}

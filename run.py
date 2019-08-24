@@ -1,7 +1,7 @@
 # importing modules
 import os
 from flask import Flask, render_template, redirect, request, url_for
-from flask_pymongo import PyMongo
+from flask_pymongo import PyMongo, pymongo
 from bson.objectid import ObjectId
 
 # declaring app name
@@ -20,7 +20,7 @@ def home():
     
 @app.route('/get_recipes')
 def get_recipes():
-    return render_template('recipes.html', recipes=mongo.db.recipes.find().limit(4))
+    return render_template('recipes.html',  recipes=mongo.db.recipes.find().sort('recipe_views', pymongo.DESCENDING).limit(4))
 
 
 if __name__=='__main__':

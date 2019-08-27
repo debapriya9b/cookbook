@@ -122,3 +122,16 @@ hr{
     padding: 0;
     list-style: none;
 }
+
+
+.content-section {
+  background: #ffffff;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  border-color: #ee6e73;
+}
+.form-border{
+  border: none;
+}

@@ -24,45 +24,60 @@
 </head>
 
 <body>
-  <!-- Navbar-->
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-4">
-        <div id="mySidepanel" class="sidepanel">
-          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-          <ul>
-            <li><a href="#">All Recipes</a>
-              <ul>
-                <div class="sidebar-sublist">
-                  <a href="#">Starters</a>
-                  <a href="#">Main Courses</a>
-                  <a href="#">Snacks</a>
-                  <a href="#">Easy Dinners</a>
-                  <a href="#">Desserts</a>
-                  <a href="#">Drinks</a>
-                </div>
-              </ul>
-            </li>
-            <li><a href="#">Add Recipe</a></li>
-            <li><a href="#">Helpers</a></li>
-          </ul>
-        </div>
-        <button class="openbtn" onclick="openNav()">☰ Cook<span>Book</span></button>
-      </div>
-      <div class="col-8">
-        <div class="navbar-nav">
-          <ul class="nav justify-content-end">
-            <li class="nav-item"><a class="nav-link" href="{{ url_for('home') }}">Home</a></li>
-            <li class="nav-link">|</li>
-            <li class="nav-item"><a class="nav-link" href="{{ url_for('login') }}">Login</a></li>
-            <li class="nav-link">|</li>
-            <li class="nav-item"><a class="nav-link" href="{{ url_for('register') }}">Register</a></li>
 
+
+
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" data-activates="mobile-demo" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
+      <a href="{{ url_for('home') }}" class="brand-logo">CookBook</a>
+      <ul class="right">
+        <li><a href="{{ url_for('register') }}">Register</a></li>
+        <li>|</li>
+        <li><a href="{{ url_for('login') }}">Login</a></li>
+      </ul>
+
+      <ul class="side-nav red lighten-2" id="mobile-demo">
+
+
+        <li class="sidenav-header red lighten-2">
+          <div class="row">
+
+            <div class="col s12">
+              <div>CookBook</div>
+
+            </div>
+          </div>
+        </li>
+
+        <li class="red lighten-2">
+          <ul class="collapsible collapsible-accordion">
+            <li>
+              <a class="collapsible-header red lighten-2"><i class="material-icons">list</i>Recipe by Categories<i class="material-icons right" style="margin-right:0;">arrow_drop_down</i></a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a class="red lighten-2" href="#">Starter</a></li>
+                  <li><a class="red lighten-2" href="#">Main</a></li>
+                  <li><a class="red lighten-2" href="#">Snacks</a></li>
+                  <li><a class="red lighten-2" href="#">Easy Dinner</a></li>
+                  <li><a class="red lighten-2" href="#">Desserts</a></li>
+                  <li><a class="red lighten-2" href="#">Drinks</a></li>
+                </ul>
+              </div>
+            </li>
           </ul>
-        </div>
-      </div>
+        </li>
+
+        <li class="red lighten-2"><a href="#" class="waves-effect waves-blue"><i class="material-icons">restaurant_menu</i>All Recipes</a></li>
+        <li class="red lighten-2"><a href="#" class="waves-effect waves-blue"><i class="material-icons">add</i>Add Recipe</a></li>
+        <li class="red lighten-2"><a href="#" class="waves-effect waves-blue"><i class="material-icons">help</i>Helper</a></li>
+        </li>
+      </ul>
+
     </div>
-  </div>
+  </nav>
+
+
   <!-- Navbar:Floating Action Button-->
   <div class="fixed-action-btn">
     <a class="btn-floating btn-large red">
@@ -90,43 +105,48 @@
   </div>
 
   <d<div class="footer">
-  <p>Footer</p>
-</div>
+    <p>Footer</p>
+    </div>
 
 
-  <!-- JS,jQuery Links for Materializecss,Bootstrap JS-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <script>
-    $(document).ready(function() {
-      $('.slider').slider();
-    });
-    // Pause slider
-    $('.slider').slider('pause');
-    // Start slider
-    $('.slider').slider('start');
-    // Next slide
-    $('.slider').slider('next');
-    // Previous slide
-    $('.slider').slider('prev');
+    <!-- JS,jQuery Links for Materializecss,Bootstrap JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+      $(document).ready(function() {
+        $('.slider').slider();
+      });
+      // Pause slider
+      $('.slider').slider('pause');
+      // Start slider
+      $('.slider').slider('start');
+      // Next slide
+      $('.slider').slider('next');
+      // Previous slide
+      $('.slider').slider('prev');
 
-    function openNav() {
-      document.getElementById("mySidepanel").style.width = "250px";
-    }
 
-    function closeNav() {
-      document.getElementById("mySidepanel").style.width = "0";
-    }
-    $(document).ready(function() {
-      $('.fixed-action-btn').floatingActionButton();
-    });
-    document.addEventListener('DOMContentLoaded', function() {
-      var elems = document.querySelectorAll('.slider');
-      var instances = M.Slider.init(elems, options);
-    });
-  </script>
+      $(document).ready(function() {
+        $('.fixed-action-btn').floatingActionButton();
+      });
+      document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.slider');
+        var instances = M.Slider.init(elems, options);
+      });
+
+
+      // SIDEBAR
+      $(document).ready(function() {
+        $('.button-collapse').sideNav({
+          menuWidth: 300, // Default is 300
+          edge: 'left', // Choose the horizontal origin
+          closeOnClick: false, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+          draggable: true // Choose whether you can drag to open on touch screens
+        });
+      });
+    </script>
 </body>
 
 </html>

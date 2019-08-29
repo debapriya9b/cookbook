@@ -91,7 +91,8 @@
       <li><a class="btn-floating teal darken-4"><i class="material-icons">help</i></a></li>
     </ul>
   </div>
-  <div class="container-fluid">
+  <section class="container-fluid section-details">
+  <div>
     <div class="Flash-message container">
 
       {% with messages = get_flashed_messages(with_categories=true) %} {% if messages %} {% for category, message in messages %}
@@ -103,8 +104,8 @@
 
     {% block content %} {% endblock %}
   </div>
-
-  <d<div class="footer">
+</section>
+  <div class="footer">
     <p>Footer</p>
     </div>
 

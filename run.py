@@ -95,9 +95,7 @@ def logout():
     session['email'] = None
     session['name'] = None
     # session.clear()
-    return redirect(url_for('login'))
-
-
+    return redirect(url_for('home'))
 
 
 

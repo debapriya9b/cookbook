@@ -5,11 +5,11 @@
             <div class="row">
                 <!-- LOGIN CARD -->
                 <div class="col s12 m8 offset-m2 l6 offset-l3">
-                    <div class="card-panel login center">
-                        <h2>
-                            <span class="slightly-desaturated-cyan">Account</span>
-                            <span class="blac-2">Sign In</span>
-                        </h2>
+                    <div class="card-panel login center login-header">Login
+                        <p>
+                            <span class="slightly-desaturated-cyan register-link">Not Registered?</span>
+                            <span class="blac-2 register-link"><a href="{{ url_for('register') }}">Register Now</a></span>
+                        </p>
                         <form action="{{ url_for('login') }}" method="POST">
                             {% if error == 'incorrect_login' %}
                                 <span style="color: red;">Your login details were incorrect.</span>

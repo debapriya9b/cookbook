@@ -5,9 +5,9 @@
             <div class="row">
                 <!-- LOGIN CARD -->
                 <div class="col s12 m8 offset-m2 l6 offset-l3">
-                    <div class="card-panel login center">
-                        <h2><span class="slightly-desaturated-cyan">Account</span> <span class="blac-2">Register</span>
-                        </h2>
+                    <div class="card-panel login center login-header">Register
+                        <p><span class="slightly-desaturated-cyan register-link">Already Registered?</span> <span class="blac-2 register-link"><a href="{{ url_for('login') }}">Login</a></span>
+                        </p>
                         <form action="{{ url_for('register') }}" method="POST">
                             <div class="input-field">
                                 <i class="slightly-desaturated-cyan-2 material-icons prefix">face</i>

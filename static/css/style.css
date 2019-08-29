@@ -55,6 +55,15 @@ hr{
 
 /*Login Page*/
 
+
+.login-header {
+  font-size: 30px;
+}
+
+.register-link{
+  font-size: 15px;
+}
+
 .content-section {
   background: #ffffff;
   padding: 10px 20px;

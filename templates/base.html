@@ -32,9 +32,16 @@
       <a href="#" data-activates="mobile-demo" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
       <a href="{{ url_for('home') }}" class="brand-logo">CookBook</a>
       <ul class="right">
-        <li><a href="{{ url_for('login') }}">Login</a></li>
-        <li>|</li>
+        
+      {% if session['email'] != None %}
         <li><a href="{{ url_for('logout') }}">Logout</a></li>
+        
+      {% else %}
+      
+       <li><a href="{{ url_for('login') }}">Login</a></li> 
+        
+      {% endif %} 
+        
       </ul>
 
       <ul class="side-nav red lighten-2" id="mobile-demo">
@@ -94,15 +101,6 @@
   </div>
   <section class="container-fluid section-details">
   <div>
-    <div class="Flash-message container">
-
-      {% with messages = get_flashed_messages(with_categories=true) %} {% if messages %} {% for category, message in messages %}
-      <div class="alert alert-{{ category }}">
-        {{ message }}
-      </div>
-      {% endfor %} {% endif %} {% endwith %}
-    </div>
-
     {% block content %} {% endblock %}
   </div>
 </section>

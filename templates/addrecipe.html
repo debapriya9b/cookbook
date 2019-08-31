@@ -34,18 +34,83 @@
                     <label for="icon_prefix">Image URL</label>
                 </div>
             </div>
-            <div class="row" id="myRow">
+
+
+            <div class="row">
                 <div class="input-field col-12">
-                   
-                    <i class="material-icons prefix">format_list_bulleted</i>
-                    <input placeholder="2 eggs" id="recipe_ingredients" name="recipe_ingredients" type="text" class="validate">
-                    <label for="icon_prefix">Ingredients</label>
-                  
-                    <button onclick="myFunction()">Add More</button>
+                    <div class="card background">
+                        <div class="card-content">
+                            <span class="card-title center whites-4">Ingredients</span>
+
+                            <!-- add button -->
+                            <a id="add-ingredient" class="btn">
+							<i class="material-icons">add</i>
+						</a>
+                            <div id="todo-form">
+                                <div class="input-field whites-4">
+                                    <input id="todo" type="text" placeholder="Delete Example and Add Ingredients...">
+                                </div>
+                            </div>
+
+                            <!-- INGREDIENT TODO FORM 1 - EXAMPLE & DELETE -->
+                            <ul class="collection todos">
+                                <li class="collection-item">
+                                    <div>1 cup (240 ml) white sugar
+                                        <a href="#!" class="secondary-content delete">
+                                        <i class="material-icons">close</i>
+                                    </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
+
+                <div class="col s12 m6">
+                    <!-- METHOD TODO FORM 2 -->
+                    <div class="card blac-3">
+                        <div class="card-content">
+                            <span class="card-title center whites-4">Procedure</span>
+
+                            <!-- add button -->
+                            <a id="add-method" class="btn">
+							<i class="material-icons">add</i>
+						</a>
+                            <div id="todo-form-2">
+                                <div class="input-field whites-4">
+                                    <input id="todo-2" type="text" placeholder="Delete Example and Add Methods...">
+                                </div>
+                            </div>
+
+                            <!-- METHOD TODO FORM 2 - EXAMPLE & DELETE -->
+                            <ul class="collection method">
+                                <li class="collection-item">
+                                    <div>Preheat oven to 350°F/175°C.
+                                        <a href="#!" class="secondary-content delete">
+                                        <i class="material-icons">close</i>
+                                    </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-        </form>
     </div>
+
+
+    <div class="row">
+        <div class="input-field col-12">
+            <!-- SUBMIT BUTTONS -->
+
+                <button class="btn background" id="submitButton">Publish</button>
+                <button class="btn blac-3" type="reset">Reset</button>
+        </div>
+    </div>
+</div>
+</form>
+</div>
 
 </div>
 

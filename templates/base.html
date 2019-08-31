@@ -144,12 +144,55 @@
      
     //Add recipe-add column function 
       
-function myFunction() {
-  var row = document.getElementById("myRow");
-  var x = row.insertCell(0);
-  x.innerHTML = "New cell";
-} 
-      
+            // INGREDIENT TODO
+            $('#add-ingredient').on('click', function (e) {
+                e.preventDefault();
+                // check that blank values cannot be added
+                let val = $('#todo').val();
+                if (val.length < 1) return false;
+                const output = `<li class="collection-item">
+				 <div>${$('#todo').val()}
+				   <input value="${$('#todo').val()}" type="hidden" name="ingredient">
+				   <a href="#!" class="secondary-content delete">
+					 <i class="material-icons">close</i>
+				   </a>
+				 </div>
+			   </li>`;
+                $('.todos').append(output);
+                Materialize.toast('Ingredient Added', 3000);
+                // e.preventDefault();
+            });
+            // DELETE INGREDIENT TODO 
+            $('.todos').on('click', '.delete', function (e) {
+                e.preventDefault();
+                $(this).parent().parent().remove();
+                Materialize.toast('Ingredient Removed', 3000);
+                // e.preventDefault();
+            });
+            // METHOD TODO
+            $('#add-method').on('click', function (e) {
+                e.preventDefault();
+				 // check that blank values cannot be added
+                let val = $('#todo-2').val();
+                if (val.length < 1) return false;
+                const output = `<li class="collection-item">
+				 <div>${$('#todo-2').val()}
+					<input value="${$('#todo-2').val()}" type="hidden" name="method">
+				   <a href="#!" class="secondary-content delete">
+					 <i class="material-icons">close</i>
+				   </a>
+				 </div>
+			   </li>`;
+                $('.method').append(output);
+                Materialize.toast('Method Added', 3000);
+                // e.preventDefault();
+            });
+            // DELETE METHOD TODO
+            $('.method').on('click', '.delete', function (e) {
+                $(this).parent().parent().remove();
+                Materialize.toast('Method Removed', 3000);
+                // e.preventDefault();
+            });
       
       
   </script>

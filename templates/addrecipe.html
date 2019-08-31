@@ -34,12 +34,19 @@
                     <label for="icon_prefix">Image URL</label>
                 </div>
             </div>
-            <div class="row">
-                <div class="input-field col-6">
+            <div class="row" id="myRow">
+                <div class="input-field col-12">
+                   
+                    <i class="material-icons prefix">format_list_bulleted</i>
+                    <input placeholder="2 eggs" id="recipe_ingredients" name="recipe_ingredients" type="text" class="validate">
+                    <label for="icon_prefix">Ingredients</label>
+                  
+                    <button onclick="myFunction()">Add More</button>
                 </div>
+            </div>
         </form>
-        </div>
-
     </div>
 
-    {% endblock %}
+</div>
+
+{% endblock %}

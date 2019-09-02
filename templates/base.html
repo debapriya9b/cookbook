@@ -151,11 +151,11 @@
             $('#add-ingredient').on('click', function (e) {
                 e.preventDefault();
                 // check that blank values cannot be added
-                let val = $('#todo').val();
+                let val = $('#recipe_ingredients').val();
                 if (val.length < 1) return false;
                 const output = `<li class="collection-item">
-				 <div>${$('#todo').val()}
-				   <input value="${$('#todo').val()}" type="hidden" name="ingredient">
+				 <div>${$('#recipe_ingredients').val()}
+				   <input value="${$('#todo').val()}" type="hidden" name="recipe_ingredients">
 				   <a href="#!" class="secondary-content delete">
 					 <i class="material-icons">close</i>
 				   </a>
@@ -180,23 +180,29 @@
                 if (val.length < 1) return false;
                 const output = `<li class="collection-item">
 				 <div>${$('#todo-2').val()}
-					<input value="${$('#todo-2').val()}" type="hidden" name="method">
+					<input value="${$('#todo-2').val()}" type="hidden" name="recipe_procedure">
 				   <a href="#!" class="secondary-content delete">
 					 <i class="material-icons">close</i>
 				   </a>
 				 </div>
 			   </li>`;
                 $('.method').append(output);
-                Materialize.toast('Method Added', 3000);
+                Materialize.toast('Procedure Added', 3000);
                 // e.preventDefault();
             });
             // DELETE METHOD TODO
             $('.method').on('click', '.delete', function (e) {
                 $(this).parent().parent().remove();
-                Materialize.toast('Method Removed', 3000);
+                Materialize.toast('Procedure Removed', 3000);
                 // e.preventDefault();
             });
             
+
+
+
+
+
+
 
 
   </script>

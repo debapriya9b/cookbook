@@ -56,32 +56,29 @@
 </div>
 
 <hr>
-<div class="container-fluid popular-recipe-header">
-  <h5>Popular Recipes</h5>
-  <br> {% for recipe in recipes %}
-
-  <div class="container-fluid">
-    <div class="card-alignment-mostviewed">
-      <div class="row">
-        <div class="col-sm-6 col-md-3">
-          <div class="card">
-            <div class="card-image">
-              <img src="{{ url_for('static', filename='img/burrito-chicken.jpg') }}">
-              <span class="card-title">{{recipe.recipe_name}}</span>
-            </div>
-            <div class="card-content">
-              <p>"{{recipe.recipe_description}}"</p>
-              <p class="recipe-card-quick-details">Views: {{recipe.recipe_views}} | Cooking Time:{{recipe.recipe_time}}</p>
-            </div>
-            <div class="card-action">
-              <a href="#">Full Recipe</a>
-            </div>
-          </div>
+ <section class="container-fluid">
+        <div class="row">
+            <h5 class="center-align">Most Viewed Recipes</h5>
         </div>
 
-      </div>
+        <div class="row--recipes">
 
-    </div>
-  </div>
-
-  {% endfor %} {% endblock content %}
+            {% for recipe in recipes %}
+                
+                <!-- IMAGE CARD -->
+                <article class="recipe-card">
+                    <a href="{{ url_for('add_recipe') }}" class="recipe-card__thumbnail-container">
+                        <img src="{{recipe.recipe_image}}" width="800" height="600" class="recipe-card__thumbnail">
+                    </a>
+                    <div class="collection-item avatar">
+                        <span class="title truncate three-hundred">{{recipe.recipe_name}}</span>
+                        
+                        <p class="recipe-card-quick-details">Views: {{recipe.recipe_views}} | Cooking Time:{{recipe.recipe_time}}</p>
+                    </div>
+                </article>
+            {% endfor %} 
+        <br><br><br>
+        </div>
+      
+    </section>
+  {% endblock content %}

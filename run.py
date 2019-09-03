@@ -1,6 +1,6 @@
 # importing modules
 import os
-from flask import Flask, render_template, redirect, request, url_for, session, flash
+from flask import Flask, render_template, redirect, request, url_for, session, flash,jsonify
 from flask_pymongo import PyMongo, pymongo
 from bson.objectid import ObjectId
 
@@ -20,9 +20,15 @@ mongo = PyMongo(app)
 def home():
     return render_template('home.html', title='Home', recipes=mongo.db.recipes.find().sort('recipe_views', pymongo.DESCENDING).limit(4))
     
-@app.route('/get_recipes')
+@app.route('/get_recipes', methods=['GET'])
 def get_recipes():
-    return render_template('recipes.html',  recipes=mongo.db.recipes.find())
+    recipe = mongo.db.recipes
+    recipes = recipe.find().sort('_id', pymongo.ASCENDING)
+    output = []
+    for i in recipes:
+        output.append({'recipe' : i['recipe']})
+        
+    return jsonify({'result' : output, 'prev_url': '', 'next_url' : ''})
     
 @app.route('/add_recipe')
 def add_recipe():

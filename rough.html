@@ -38,3 +38,169 @@ def login():
     return render_template('login.html', error=error)
     
 ***********************************************************************************************
+
+add recipe
+
+
+
+
+
+{% extends 'base.html' %} {% block content %}
+
+<div class="container">
+
+    <h5>Add New Recipe</h5>
+
+
+    <div class="row">
+        <form action="{{ url_for('insert_recipe') }}" method="POST" class="col s12">
+            <div class="row">
+                <div class="input-field col-6">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input placeholder="What's your name?" id="recipe_author" name="recipe_author" type="text" class="validate">
+                    <label for="icon_prefix">Author</label>
+                </div>
+                <div class="input-field col-6">
+                    <i class="material-icons prefix">restaurant_menu</i>
+                    <input placeholder="Which Recipe you want to share with us?" id="recipe_name" name="recipe_name" type="text" class="validate">
+                    <label for="icon_prefix">Recipe Name</label>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="input-field col-12">
+                    <i class="material-icons prefix">description</i>
+                    <textarea placeholder="Write a little about this recipe!" name="recipe_description" id="recipe_description" class="materialize-textarea"></textarea>
+                    <label for="icon_telephone">Description</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col-12">
+                    <i class="material-icons prefix">image</i>
+                    <input placeholder="https://someurl.com/abcd123" id="recipe_image" name="recipe_image" type="text" class="validate">
+                    <label for="icon_prefix">Image URL</label>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="input-field col-12">
+                    <div class="card background">
+                        <div class="card-content">
+                            <span class="card-title center whites-4">Ingredients</span>
+
+                            <!-- add button -->
+                            <a id="add-ingredient" class="btn">
+							<i class="material-icons">add</i>
+						</a>
+                            <div id="todo-form">
+                                <div class="input-field whites-4">
+                                    <input id="recipe_ingredients" type="text" placeholder="Delete Example and Add Ingredients..." name="recipe_ingredients[]">
+                                </div>
+                            </div>
+
+                            <!-- INGREDIENT TODO FORM 1 - EXAMPLE & DELETE -->
+                            <ul class="collection todos">
+                                <li class="collection-item">
+                                    <div>1 cup (240 ml) white sugar
+                                        <a href="#!" class="secondary-content delete">
+                                        <i class="material-icons">close</i>
+                                    </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 m6">
+                    <!-- METHOD TODO FORM 2 -->
+                    <div class="card blac-3">
+                        <div class="card-content">
+                            <span class="card-title center whites-4">Procedure</span>
+
+                            <!-- add button -->
+                            <a id="add-method" class="btn">
+							<i class="material-icons">add</i>
+						</a>
+                            <div id="todo-form-2">
+                                <div class="input-field whites-4">
+                                    <input id="todo-2" type="text" placeholder="Delete Example and Add Procedure..." name="recipe_procedure[]">
+                                </div>
+                            </div>
+
+                            <!-- METHOD TODO FORM 2 - EXAMPLE & DELETE -->
+                            <ul class="collection method">
+                                <li class="collection-item">
+                                    <div>Preheat oven to 350°F/175°C.
+                                        <a href="#!" class="secondary-content delete">
+                                        <i class="material-icons">close</i>
+                                    </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+    </div>
+
+    <div class="row">
+        <div class="input-field col-4">
+            <select>
+      <option value="" disabled selected>Choose your option</option>
+      <option value="1">Easy</option>
+      <option value="2">Moderate</option>
+      <option value="3">Hard</option>
+    </select>
+            <label>Difficulty Level</label>
+        </div>
+        <div class="input-field col-4">
+            <select>
+      <option value="" disabled selected>Choose your option</option>
+      <option value="1">Starter</option>
+      <option value="2">Main Dish</option>
+      <option value="3">Snacks</option>
+      <option value="3">Desserts</option>
+      <option value="3">Drinks</option>
+    </select>
+            <label>Category</label>
+        </div>
+
+        <div class="input-field col-4">
+            <input placeholder="1 hour 30 minutes" id="recipe_time" name="recipe_time" type="text" class="validate">
+            <label for="icon_prefix">Preparation Time</label>
+        </div>
+
+
+    </div>
+
+    <div class="row">
+        <button class="btn waves-effect waves-light" type="submit" name="action">Add Recipe
+    <i class="material-icons right">send</i>
+  </button>
+    </div>
+
+
+
+
+</div>
+</form>
+</div>
+
+</div>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -166,5 +166,8 @@ padding: 0;
     bottom: 50px;
 }
 
-
+.full-recipe-button{
+  text-align: right;
+  color: #ee6e73;
+}
 

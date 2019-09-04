@@ -20,6 +20,8 @@
                 </div>
 
             </div>
+            
+            
             <div class="row">
                 <div class="input-field col-12">
                     <i class="material-icons prefix">description</i>
@@ -27,6 +29,8 @@
                     <label for="icon_telephone">Description</label>
                 </div>
             </div>
+            
+            
             <div class="row">
                 <div class="input-field col-12">
                     <i class="material-icons prefix">image</i>
@@ -34,112 +38,70 @@
                     <label for="icon_prefix">Image URL</label>
                 </div>
             </div>
-
-
+            
+            
             <div class="row">
                 <div class="input-field col-12">
                     <div class="card background">
                         <div class="card-content">
                             <span class="card-title center whites-4">Ingredients</span>
+                            <div class="new-ingredient ingredient">
+                            <textarea id="recipe_ingredients" name="recipe_ingredients[]" class="directions validate materialize-textarea"
+                                   placeholder="list each direction one per line" required></textarea>
+                            </div>       
+                                   <button type="button" class="add-ingredient btn ">
+                                    <i class="material-icons">add</i>
+                                   </button>
 
-                            <!-- add button -->
-                            <a id="add-ingredient" class="btn">
-							<i class="material-icons">add</i>
-						</a>
-                            <div id="todo-form">
-                                <div class="input-field whites-4">
-                                    <input id="recipe_ingredients" type="text" placeholder="Delete Example and Add Ingredients..." name="recipe_ingredients">
-                                </div>
-                            </div>
-
-                            <!-- INGREDIENT TODO FORM 1 - EXAMPLE & DELETE -->
-                            <ul class="collection todos">
-                                <li class="collection-item">
-                                    <div>1 cup (240 ml) white sugar
-                                        <a href="#!" class="secondary-content delete">
-                                        <i class="material-icons">close</i>
-                                    </a>
-                                    </div>
-                                </li>
-                            </ul>
+                                    <!-- remove last direction -->
+                                  <button type="button" class="remove-ingredient btn ">
+                                 <i class="material-icons">remove</i>
+                                  </button>
                         </div>
                     </div>
-                </div>
 
-                <div class="col s12 m6">
-                    <!-- METHOD TODO FORM 2 -->
-                    <div class="card blac-3">
+                </div>
+            </div>
+            
+            
+            <div class="row">
+                <div class="input-field col-12">
+                    <div class="card background">
                         <div class="card-content">
                             <span class="card-title center whites-4">Procedure</span>
+                            <div class="new-procedure procedure">
+                            <textarea id="recipe_procedure" name="recipe_procedure[]" class="directions validate materialize-textarea"
+                                   placeholder="list each direction one per line" required></textarea>
+                            </div>       
+                                   <button type="button" class="add-procedure btn ">
+                                    <i class="material-icons">add</i>
+                                   </button>
 
-                            <!-- add button -->
-                            <a id="add-method" class="btn">
-							<i class="material-icons">add</i>
-						</a>
-                            <div id="todo-form-2">
-                                <div class="input-field whites-4">
-                                    <input id="todo-2" type="text" placeholder="Delete Example and Add Procedure..." name="recipe_procedure">
-                                </div>
-                            </div>
-
-                            <!-- METHOD TODO FORM 2 - EXAMPLE & DELETE -->
-                            <ul class="collection method">
-                                <li class="collection-item">
-                                    <div>Preheat oven to 350°F/175°C.
-                                        <a href="#!" class="secondary-content delete">
-                                        <i class="material-icons">close</i>
-                                    </a>
-                                    </div>
-                                </li>
-                            </ul>
+                                    <!-- remove last direction -->
+                                  <button type="button" class="remove-procedure btn ">
+                                 <i class="material-icons">remove</i>
+                                  </button>
                         </div>
                     </div>
+
                 </div>
-
             </div>
-    </div>
 
-    <div class="row">
-        <div class="input-field col-4">
-            <select>
-      <option value="" disabled selected>Choose your option</option>
-      <option value="1">Easy</option>
-      <option value="2">Moderate</option>
-      <option value="3">Hard</option>
-    </select>
-            <label>Difficulty Level</label>
-        </div>
-        <div class="input-field col-4">
-            <select>
-      <option value="" disabled selected>Choose your option</option>
-      <option value="1">Starter</option>
-      <option value="2">Main Dish</option>
-      <option value="3">Snacks</option>
-      <option value="3">Desserts</option>
-      <option value="3">Drinks</option>
-    </select>
-            <label>Category</label>
-        </div>
 
-        <div class="input-field col-4">
-            <input placeholder="1 hour 30 minutes" id="recipe_time" name="recipe_time" type="text" class="validate">
-            <label for="icon_prefix">Preparation Time</label>
-        </div>
+
+
+
+            <div class="row ">
+                <button class="btn waves-effect waves-light " type="submit " name="action ">Add Recipe
+                  <i class="material-icons right ">send</i>
+                <button>
+            </div>
+
+
 
 
     </div>
-
-    <div class="row">
-        <button class="btn waves-effect waves-light" type="submit" name="action">Add Recipe
-    <i class="material-icons right">send</i>
-  </button>
-    </div>
-
-
-
-
-</div>
-</form>
+    </form>
 </div>
 
 </div>

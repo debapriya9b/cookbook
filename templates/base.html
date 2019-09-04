@@ -151,69 +151,55 @@
         $('select').material_select();
       });
       
-      
-      
-      
-      
+     // Add Ingredients-Add recipe
      
-    //Add recipe-add column function 
-      
-            // INGREDIENT TODO
-            $('#add-ingredient').on('click', function (e) {
-                e.preventDefault();
-                // check that blank values cannot be added
-                let val = $('#recipe_ingredients').val();
-                if (val.length < 1) return false;
-                const output = `<li class="collection-item">
-				 <div>${$('#recipe_ingredients').val()}
-				   <input value="${$('#recipe_ingredients').val()}" type="hidden" name="recipe_ingredients">
-				   <a href="#!" class="secondary-content delete">
-					 <i class="material-icons">close</i>
-				   </a>
-				 </div>
-			   </li>`;
-                $('.todos').append(output);
-                Materialize.toast('Ingredient Added', 3000);
-                // e.preventDefault();
-            });
-            
-            
-            // DELETE INGREDIENT TODO 
-            $('.todos').on('click', '.delete', function (e) {
-                e.preventDefault();
-                $(this).parent().parent().remove();
-                Materialize.toast('Ingredient Removed', 3000);
-                // e.preventDefault();
-            });
-            
-            
-            
-            
-            // METHOD TODO
-            $('#add-method').on('click', function (e) {
-                e.preventDefault();
-				 // check that blank values cannot be added
-                let val = $('#todo-2').val();
-                if (val.length < 1) return false;
-                const output = `<li class="collection-item">
-				 <div>${$('#todo-2').val()}
-					<input value="${$('#todo-2').val()}" type="hidden" name="recipe_procedure">
-				   <a href="#!" class="secondary-content delete">
-					 <i class="material-icons">close</i>
-				   </a>
-				 </div>
-			   </li>`;
-                $('.method').append(output);
-                Materialize.toast('Procedure Added', 3000);
-                // e.preventDefault();
-            });
-            // DELETE METHOD TODO
-            $('.method').on('click', '.delete', function (e) {
-                $(this).parent().parent().remove();
-                Materialize.toast('Procedure Removed', 3000);
-                // e.preventDefault();
-            });
-            
+     var directionCount = $(".ingredient").length;
+    /* add new cloned item */
+    $(".add-ingredient").on("click", function () {
+        /* clone and remove existing values */
+        $(".new-ingredient:first").clone().insertBefore(".add-ingredient").find("input[type='text'], select, textarea").val("");
+        /* increase counter so original direction is never removed */
+        directionCount += 1;
+    });
+    /* delete last cloned item */
+    $(".remove-ingredient").on("click", function () {
+        if (directionCount > 1) {
+            /* only remove the :last item */
+            $(this).siblings(".new-ingredient:last").remove();
+            /* ensure original direction line never gets deleted */
+            directionCount -= 1;
+        }
+    });
+
+
+// Add Procedure-Add recipe
+     
+     var directionCount = $(".procedure").length;
+    /* add new cloned item */
+    $(".add-procedure").on("click", function () {
+        /* clone and remove existing values */
+        $(".new-procedure:first").clone().insertBefore(".add-procedure").find("input[type='text'], select, textarea").val("");
+        /* increase counter so original direction is never removed */
+        directionCount += 1;
+    });
+    /* delete last cloned item */
+    $(".remove-procedure").on("click", function () {
+        if (directionCount > 1) {
+            /* only remove the :last item */
+            $(this).siblings(".new-procedure:last").remove();
+            /* ensure original direction line never gets deleted */
+            directionCount -= 1;
+        }
+    });
+
+
+
+
+
+
+
+
+
 
   </script>
 </body>

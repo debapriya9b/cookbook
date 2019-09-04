@@ -29,13 +29,22 @@ def get_recipes():
 def add_recipe():
     return render_template('addrecipe.html')
     
-@app.route('/insert_recipe', methods=['GET', 'POST'])
+@app.route('/insert_recipe', methods=['POST'])
 def insert_recipe():
-      recipes=mongo.db.recipes
-      recipes.insert_one(request.form.to_dict())
-      return redirect(url_for('get_recipes'))
+   print(request.form)
+   print(request.form.getlist('recipe_ingredients[]'))
+   print(request.form.getlist('recipe_procedure[]'))
+   print(request.form.to_dict())
+   recipes = mongo.db.recipes
+   data = request.form.to_dict()
+   data.update({'recipe_ingredients':request.form.getlist('recipe_ingredients[]')})
+   data.update({'recipe_procedure':request.form.getlist('recipe_procedure[]')})
+   del data['recipe_ingredients[]']
+   del data['recipe_procedure[]']
+   recipes.insert_one(data)
+   return redirect(url_for('get_recipes'))
     
-    
+
 @app.route('/register', methods=['POST', 'GET'])
 def register():
     '''Accepts POST and GET requests.

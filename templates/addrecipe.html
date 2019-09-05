@@ -8,7 +8,7 @@
     <div class="row">
         <form action="{{ url_for('insert_recipe') }}" method="POST" class="col s12">
             <div class="row">
-                <div class="input-field col-6">
+                <div class="input-field col-sm-12 col-md-6">
                     <i class="material-icons prefix">account_circle</i>
                     <input placeholder="What's your name?" id="recipe_author" name="recipe_author" type="text" class="validate" required>
                     <label for="icon_prefix">Author</label>
@@ -23,7 +23,7 @@
 
 
             <div class="row">
-                <div class="input-field col-12">
+                <div class="input-field col-sm-12 col-md-6">
                     <i class="material-icons prefix">description</i>
                     <textarea placeholder="Write a little about this recipe!" name="recipe_description" id="recipe_description" class="materialize-textarea" required></textarea>
                     <label for="icon_telephone">Description</label>
@@ -89,7 +89,7 @@
 
 
             <div class="row">
-                <div class="input-field col-4">
+                <div class="input-field col-sm-12 col-md-4">
                     <i class="material-icons prefix">access_time</i>
                     <input placeholder="1 hour 30 minutes" id="recipe_time" name="recipe_time" type="text" class="validate" required>
                     <label for="icon_prefix">Preparation Time</label>
@@ -97,7 +97,7 @@
 
 
 
-                <div class="input-field col-4">
+                <div class="input-field col-sm-12 col-md-4">
                     <div class="form-group">
                         <select class="form-control" id="category" name="recipe_category">
                              <option value="" disabled selected>Choose Category</option>
@@ -109,10 +109,10 @@
                 </div>
 
 
-                <div class="input-field col-4">
+                <div class="input-field col-sm-12 col-md-4">
                     <div class="form-group">
                         <select class="form-control" id="difficulty" name="recipe_difficulty_level">
-                             <option value="" disabled selected>Choose Category</option>
+                             <option value="" disabled selected>Choose Difficulty Level</option>
                              {% for dif in difficulties %}
                              <option value="{{dif.difficulty_name}}">{{dif.difficulty_name}}</option>
                               {% endfor %}

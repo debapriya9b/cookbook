@@ -171,3 +171,21 @@ padding: 0;
   color: #ee6e73;
 }
 
+/*View*/
+
+.recipe-view-header{
+  text-align: center;
+    font-size: 45px;
+  font-weight: bolder;
+}
+
+.recipe-author-details{
+  text-align: center;
+}
+.recipe-description-details{
+  font-size: 25px;
+}
+
+.recipe-options{
+  text-align: justify-content;
+}

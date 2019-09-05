@@ -1,0 +1,49 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="container-fluid">
+    <div class="col 12 recipe-view-header">
+        <h3>Custard Pie</h3>
+    </div>
+    <br>
+    <div class="row container-fluid">
+        <div class="col-sm-12 col-md-4">
+            <img class="img-fluid" src="{{ url_for('static', filename='img/barbecue-barbeque.jpg') }}"></img>
+            <p class="recipe-author-details">Author <span>Name</span></p>
+        </div>
+        <div class="col-sm-12 col-md-8">
+            <p class="recipe-description-details font-weight-light">This eggy, sweet pie is easy to make—it forms its own crust as it cooks! Delicious for dessert or a sweet breakfast.
+            </p>
+            <br>
+            <div>
+                <ul class="list-group list-group-horizontal-md">
+                    <li class="list-group-item font-weight-bold Small shadow">Category: <span class="font-weight-light font-italic">Dessert</span></li>
+                    <li class="list-group-item font-weight-bold Small shadow">Preparation Time: <span class="font-weight-light font-italic">30 Minutes</span></li>
+                    <li class="list-group-item font-weight-bold Small shadow">Difficulty Level: <span class="font-weight-light font-italic">Easy</span></li>
+                </ul>
+            </div>
+            <br>
+            <div class="recipe-options">
+                <div>
+
+
+                    <p>Like this recipe?</p>
+                        <div class="switch">
+                            <label>
+                           Nope    
+                         <input type="checkbox">
+                          <span class="lever"></span>
+                           Yaah!!
+                           </label>
+                        </div>
+
+
+
+
+                </div>
+
+            </div>
+
+
+
+
+            {% endblock %}

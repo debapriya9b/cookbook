@@ -24,6 +24,16 @@ def home():
 def get_recipes():
     return render_template('recipes.html', title='All Recipes', recipes=mongo.db.recipes.find().skip(4 *  (1 - 1)).limit(4))
     #db.companies.find().skip(NUMBER_OF_ITEMS * (PAGE_NUMBER - 1)).limit(NUMBER_OF_ITEMS )
+
+@app.route('/view')
+def view():
+    return render_template('view.html', title='View Full Recipe')
+
+
+
+
+
+
     
 @app.route('/add_recipe')
 def add_recipe():

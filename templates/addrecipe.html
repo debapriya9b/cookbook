@@ -99,7 +99,7 @@
 
                 <div class="input-field col-4">
                     <div class="form-group">
-                        <select class="form-control" id="category" name="category_name">
+                        <select class="form-control" id="category" name="recipe_category">
                              <option value="" disabled selected>Choose Category</option>
                              {% for cat in categories %}
                              <option value="{{cat.category_name}}">{{cat.category_name}}</option>
@@ -111,7 +111,7 @@
 
                 <div class="input-field col-4">
                     <div class="form-group">
-                        <select class="form-control" id="difficulty" name="difficulty_name">
+                        <select class="form-control" id="difficulty" name="recipe_difficulty_level">
                              <option value="" disabled selected>Choose Category</option>
                              {% for dif in difficulties %}
                              <option value="{{dif.difficulty_name}}">{{dif.difficulty_name}}</option>

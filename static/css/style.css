@@ -187,5 +187,6 @@ padding: 0;
 }
 
 .recipe-options{
-  text-align: justify-content;
+  text-align: right;
+  margin-top: 20px;
 }

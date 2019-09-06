@@ -67,7 +67,7 @@
                 
                 <!-- IMAGE CARD -->
                 <article class="recipe-card">
-                    <a href="{{ url_for('add_recipe') }}" class="recipe-card__thumbnail-container">
+                    <a href="{{ url_for('view', id=recipe._id) }}" class="recipe-card__thumbnail-container">
                         <img src="{{recipe.recipe_image}}" width="800" height="600" class="recipe-card__thumbnail">
                     </a>
                     <div class="collection-item avatar">

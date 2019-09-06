@@ -1,50 +1,84 @@
 {% extends 'base.html' %} {% block content %}
 
 <div class="container-fluid">
-    <div class="col 12 recipe-view-header">
-        <h3>Custard Pie</h3>
-    </div>
+            <div class="col 12 recipe-view-header">
+                    <h3>Custard Pie</h3>
+            </div>
     <br>
-    <div class="row container-fluid">
-        <div class="col-sm-12 col-md-4">
-            <img class="img-fluid" src="{{ url_for('static', filename='img/barbecue-barbeque.jpg') }}"></img>
-            <p class="recipe-author-details">Author <span>Name</span></p>
-        </div>
-        <div class="col-sm-12 col-md-8">
-            <p class="recipe-description-details font-weight-light">This eggy, sweet pie is easy to make—it forms its own crust as it cooks! Delicious for dessert or a sweet breakfast.
-            </p>
-            <br>
-            <div>
-                <ul class="list-group list-group-horizontal-md">
-                    <li class="list-group-item font-weight-bold Small shadow">Category: <span class="font-weight-light font-italic">Dessert</span></li>
-                    <li class="list-group-item font-weight-bold Small shadow">Preparation Time: <span class="font-weight-light font-italic">30 Minutes</span></li>
-                    <li class="list-group-item font-weight-bold Small shadow">Difficulty Level: <span class="font-weight-light font-italic">Easy</span></li>
-                </ul>
-            </div>
-            <br>
-            <div>
-                <div class="row">
-                    <div class="col-6>"
-                        <p>Like this recipe?</p>
-                        <div class="switch">
-                            <label>
-                          <i class="material-icons prefix tiny">thumb_down</i>   
-                         <input type="checkbox">
-                          <span class="lever"></span>
-                           <i class="material-icons prefix tiny">thumb_up</i>
-                           </label>
-                        </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-4">
+                    <img class="img-fluid" src="{{ url_for('static', filename='img/barbecue-barbeque.jpg') }}"></img>
+                        <p class="recipe-author-details">Author <span>Name</span></p>
+                </div>
+                
+                <div class="col-sm-12 col-md-8">
+                             <p class="recipe-description-details font-weight-light">This eggy, sweet pie is easy to make—it forms its own crust as it cooks! Delicious for dessert or a sweet breakfast.
+                             </p>
+   <br>
+                            <div>
+                                <ul class="list-group list-group-horizontal-md">
+                                 <li class="list-group-item font-weight-bold shadow">Category: <span class="font-weight-light font-italic">Dessert</span></li>
+                                 <li class="list-group-item font-weight-bold shadow">Preparation Time: <span class="font-weight-light font-italic">30 Minutes</span></li>
+                                <li class="list-group-item font-weight-bold shadow">Difficulty Level: <span class="font-weight-light font-italic">Easy</span></li>
+                                </ul>
+                            </div>
+    <br>
+                              <div>
+                                   <div class="row">
+                                       <div class="col-6>" <p>Like this recipe?</p>
+                                        <div class="switch">
+                                              <label>
+                                               <i class="material-icons prefix tiny">thumb_down</i>   
+                                           <input type="checkbox">
+                                             <span class="lever"></span>
+                                           <i class="material-icons prefix tiny">thumb_up</i>
+                                         </label>
+                                        </div>
+                                    </div>
+                                      <div class="col-6">
+                                          <ul class="list-inline recipe-options">
+                                            <li class="list-inline-item"><a data-toggle="tooltip" title="Edit Recipe" href="#"><i class="material-icons prefix small teal-text">create</i></a></li>
+                                             <li class="list-inline-item"><a data-toggle="tooltip" title="Delete Recipe" href="#"><i class="material-icons prefix small teal-text">delete</i></a></li>
+                                           </ul>
+                                      </div>
+
+                    <div>
+    <br>                                               
+
                     </div>
-                   <div class="col-6"> 
-                   <ul class="list-inline recipe-options">
-                       <li class="list-inline-item"><a data-toggle="tooltip" title="Edit Recipe" href="#"><i class="material-icons prefix small teal-text">create</i></a></li>
-                       <li class="list-inline-item"><a data-toggle="tooltip" title="Delete Recipe" href="#"><i class="material-icons prefix small teal-text">delete</i></a></li>
-                   </ul>
-                   </div>
-                   
+                    </div>
+                    </div>
+                    </div>
+    
+    <br>
+    <br>
+    <br>
+    <div class="container-fluid">
+  
+        <div class="row">
+            <div class="col-md-4 recipe-ingredients-header">
+              <h5>Ingredients</h5> 
+              <ul class="recipe-ingredients-list">
+                  <li>egg</li>
+                  <li>milk</li>
+              </ul>
             </div>
+            <div class="col-md-8 recipe-procedure-header">
+                <h5>Procedure</h5>
+                <dl>
+                    <dd>Boil water.</dd>
+                    <hr class="recipe-procedure-divider">
+                </dl>
+            </div>
+        </div>
+        
+                
+           
+            
+    </div>          
+            
+            
 
 
-
-
-            {% endblock %}
+        
+                    {% endblock %}

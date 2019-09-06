@@ -191,4 +191,28 @@ padding: 0;
   margin-top: 20px;
 }
 
+.recipe-ingredients-header h5{
+  text-align: left;
+}
+
+.recipe-procedure-header h5{
+  text-align: left;
+}
+
+
+/*
+.recipe-ingredients-list{
+  list-style-type: circle;
+}*/
+
+.recipe-procedure-divider{
+  height:1.5px;
+  color: #ee6e73;
+  background-color: #ee6e73;
+  border: none;
+margin-left: 0px;
+}
+
+
+
 

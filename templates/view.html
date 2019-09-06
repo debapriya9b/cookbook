@@ -57,16 +57,22 @@
         <div class="row">
             <div class="col-md-4 recipe-ingredients-header">
               <h5>Ingredients</h5> 
+              <br>
               <ul class="recipe-ingredients-list">
-                  <li>egg</li>
-                  <li>milk</li>
+                  {% for ingredient in recipe.recipe_ingredients %}
+                  <li><i class="material-icons prefix teal-text tiny">fiber_manual_record</i>   {{ ingredient }}</li>
+                  
+                  {% endfor %}
               </ul>
             </div>
             <div class="col-md-8 recipe-procedure-header">
                 <h5>Procedure</h5>
+                <br>
                 <dl>
-                    <dd>Boil water.</dd>
+                    {% for step in recipe.recipe_procedure %}
+                    <dd><i class="material-icons prefix teal-text tiny">fiber_manual_record</i> {{ step }}</dd>
                     <hr class="recipe-procedure-divider">
+                     {% endfor %}
                 </dl>
             </div>
         </div>

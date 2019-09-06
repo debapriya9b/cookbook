@@ -27,7 +27,7 @@ def get_recipes():
 
 @app.route('/view/recipe_id?=<id>')
 def view(id):
-    mongo.db.recipes.find_one_and_update({"_id": ObjectId(id)}, {"$inc": {"views": 1}})
+    
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(id)})
     return render_template('view.html', title='View Full Recipe', recipe=recipe)
 

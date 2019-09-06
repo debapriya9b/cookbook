@@ -6,10 +6,10 @@
                 <h4>Recipes</h4>
          <div class="row">
           {% for recipe in recipes %}
-           <div class="col-sm-12 col-md-4">
+           <div class="col-md-3 card-deck">
            <br>
             
-                  <div class="card" style="width:300px">
+                  <div class="card">
                         <img class="card-img-top" src="{{recipe.recipe_image}}" alt="Card image" style="width:100%">
                          <div class="card-body">
                              <h4 class="card-title">"{{recipe.recipe_name}}"</h4>
@@ -17,11 +17,11 @@
                              <a href="#" class="stretched-link">More Details...</a>
                          </div>
                   </div>
-
- {% endfor %}
-
-           </div>
-         </div>
+             </div>
+             
+           {% endfor %}
+           
+        </div>
   </div>
  
 

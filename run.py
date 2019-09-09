@@ -30,12 +30,6 @@ def view(id):
     
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(id)})
     return render_template('view.html', title='View Full Recipe', recipe=recipe)
-
-
-
-
-
-
     
 @app.route('/add_recipe')
 def add_recipe():
@@ -57,6 +51,21 @@ def insert_recipe():
    del data['recipe_procedure[]']
    recipes.insert_one(data)
    return redirect(url_for('get_recipes'))
+ 
+ 
+@app.route('/edit_recipe/recipe_id?=<id>')
+def edit_recipe(id):
+    # check for logged in user
+    #email = session.get('email')
+    #if not email:
+        #return redirect(url_for('register'))
+        
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(id)}) 
+    categories=mongo.db.categories.find()
+    difficulties=mongo.db.difficulties.find()
+    return render_template('editrecipe.html', title='Edit Recipe', recipe=recipe, categories=categories, difficulties=difficulties)
+
+
     
 
 @app.route('/register', methods=['POST', 'GET'])

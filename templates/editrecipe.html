@@ -102,7 +102,7 @@
                         <select class="form-control" id="category" name="recipe_category">
                              <option value="" disabled selected>Choose Category</option>
                              {% for cat in categories %}
-                             {% if cat.category_name == recipe.category_name %}
+                             {% if cat.category_name == recipe.recipe_category %}
                              <option value="{{cat.category_name}}" selected >{{cat.category_name}}</option>
                              {% else %}
                               <option value="{{cat.category_name}}">{{cat.category_name}}</option>
@@ -118,7 +118,11 @@
                         <select class="form-control" id="difficulty" name="recipe_difficulty_level">
                              <option value="" disabled selected>Choose Difficulty Level</option>
                              {% for dif in difficulties %}
+                             {% if dif.difficulty_name == recipe.recipe_difficulty_level %}
+                             <option value="{{dif.difficulty_name}}" selected >{{dif.difficulty_name}}</option>
+                             {% else %}
                              <option value="{{dif.difficulty_name}}">{{dif.difficulty_name}}</option>
+                             {% endif %}
                               {% endfor %}
                         </select>
                     </div>

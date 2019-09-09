@@ -10,12 +10,12 @@
             <div class="row">
                 <div class="input-field col-sm-12 col-md-6">
                     <i class="material-icons prefix teal-text">account_circle</i>
-                    <input placeholder="What's your name?" id="recipe_author" name="recipe_author" type="text" class="validate" required>
+                    <input value={{recipe.recipe_author}} id="recipe_author" name="recipe_author" type="text" class="validate" required>
                     <label for="icon_prefix">Author</label>
                 </div>
                 <div class="input-field col-6">
                     <i class="material-icons prefix teal-text">restaurant_menu</i>
-                    <input placeholder="Which Recipe you want to share with us?" id="recipe_name" name="recipe_name" type="text" class="validate" required>
+                    <input value={{recipe.recipe_name}} id="recipe_name" name="recipe_name" type="text" class="validate" required>
                     <label for="icon_prefix">Recipe Name</label>
                 </div>
 
@@ -25,7 +25,7 @@
             <div class="row">
                 <div class="input-field col-sm-12 col-md-12">
                     <i class="material-icons prefix teal-text">description</i>
-                    <textarea placeholder="Write a little about this recipe!" name="recipe_description" id="recipe_description" class="materialize-textarea" required></textarea>
+                    <textarea name="recipe_description" id="recipe_description" class="materialize-textarea" required>{{recipe.recipe_description}}</textarea>
                     <label for="icon_telephone">Description</label>
                 </div>
             </div>
@@ -34,7 +34,7 @@
             <div class="row">
                 <div class="input-field col-12">
                     <i class="material-icons prefix teal-text">image</i>
-                    <input placeholder="https://someurl.com/abcd123" id="recipe_image" name="recipe_image" type="text" class="validate" required>
+                    <input value={{recipe.recipe_image}} id="recipe_image" name="recipe_image" type="text" class="validate" required>
                     <label for="icon_prefix">Image URL</label>
                 </div>
             </div>
@@ -91,7 +91,7 @@
             <div class="row">
                 <div class="input-field col-sm-12 col-md-4">
                     <i class="material-icons prefix teal-text">access_time</i>
-                    <input placeholder="1 hour 30 minutes" id="recipe_time" name="recipe_time" type="text" class="validate" required>
+                    <input value={{ recipe.recipe_time }} id="recipe_time" name="recipe_time" type="text" class="validate" required>
                     <label for="icon_prefix">Preparation Time</label>
                 </div>
 
@@ -131,7 +131,7 @@
 
 
             <div class="row">
-                <button class="btn waves-effect waves-light " type="submit " name="action ">Add Recipe
+                <button class="btn waves-effect waves-light " type="submit " name="action ">Save
                   <i class="material-icons right ">send</i>
                 <button>
             </div>

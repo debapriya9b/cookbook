@@ -73,8 +73,8 @@ def update_recipe(id):
         {
         'recipe_name':request.form.get('recipe_name'),
         'recipe_description':request.form.get('recipe_description'),
-        'recipe_ingredients':request.form.get('recipe_ingredients'),
-        'recipe_procedure':request.form.get('recipe_procedure'),
+        'recipe_ingredients':request.form.getlist('recipe_ingredients'),
+        'recipe_procedure':request.form.getlist('recipe_procedure'),
         'recipe_category':request.form.get('recipe_category'),
         'recipe_time':request.form.get('recipe_time'),
         'recipe_recipe_difficulty_level':request.form.get('recipe_recipe_difficulty_level'),

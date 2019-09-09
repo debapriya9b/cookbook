@@ -14,7 +14,7 @@
                          <div class="card-body">
                              <h4 class="card-title">"{{recipe.recipe_name}}"</h4>
                              <p class="card-text">"{{recipe.recipe_description}}"</p>
-                             <a href="#" class="stretched-link">More Details...</a>
+                             <a href="{{ url_for('view', id=recipe._id) }}" class="stretched-link">More Details...</a>
                          </div>
                   </div>
              </div>

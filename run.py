@@ -22,7 +22,7 @@ def home():
     
 @app.route('/get_recipes', methods=['GET'])
 def get_recipes():
-    return render_template('recipes.html', title='All Recipes', recipes=mongo.db.recipes.find().skip(4 *  (1 - 1)).limit(4))
+    return render_template('recipes.html', title='All Recipes', recipes=mongo.db.recipes.find().skip(4 *  (1 - 1)).limit(6))
     #db.companies.find().skip(NUMBER_OF_ITEMS * (PAGE_NUMBER - 1)).limit(NUMBER_OF_ITEMS )
 
 @app.route('/view/recipe_id?=<id>')
@@ -84,7 +84,10 @@ def update_recipe(id):
     
     return redirect(url_for('view'))
     
-    
+@app.route('/delete_recipe/recipe_id?=<id>')
+def delete_recipe(id):
+    mongo.db.recipes.remove({'_id': ObjectId(id)})
+    return redirect(url_for('get_recipes'))    
     
     
     

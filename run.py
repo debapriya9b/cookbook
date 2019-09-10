@@ -30,7 +30,7 @@ def get_recipes():
 def view(id):
     
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(id)})
-    return redirect(url_for('view', id=id))
+    return render_template('view.html', title='View Full Recipe', recipe=recipe)
 
     
 @app.route('/add_recipe')
@@ -84,7 +84,7 @@ def update_recipe(id):
         'recipe_image':request.form.get('recipe_image')
     })
     
-    return redirect(url_for('view'))
+    return redirect(url_for('view', id=id))
     
 @app.route('/delete_recipe/recipe_id?=<id>')
 def delete_recipe(id):

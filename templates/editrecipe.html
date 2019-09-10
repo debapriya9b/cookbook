@@ -131,7 +131,7 @@
 
 
             <div class="row">
-                <button class="btn waves-effect waves-light " type="submit " name="action ">Save<button>
+                <button class="btn waves-effect waves-light " id="submitButton" type="submit " name="action ">Save<button>
                     
              <button type="reset" class="btn waves-effect waves-light red"
                         onclick="history.go(-1)">
@@ -147,5 +147,12 @@
 </div>
 
 </div>
+
+<!--
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const submitButton = document.getElementById('submitButton')
+    })
+</script>
 
 {% endblock %}

@@ -25,11 +25,13 @@ def get_recipes():
     return render_template('recipes.html', title='All Recipes', recipes=mongo.db.recipes.find().skip(4 *  (1 - 1)).limit(6))
     #db.companies.find().skip(NUMBER_OF_ITEMS * (PAGE_NUMBER - 1)).limit(NUMBER_OF_ITEMS )
 
+
 @app.route('/view/recipe_id?=<id>')
 def view(id):
     
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(id)})
     return render_template('view.html', title='View Full Recipe', recipe=recipe)
+
     
 @app.route('/add_recipe')
 def add_recipe():

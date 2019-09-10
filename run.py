@@ -30,7 +30,7 @@ def get_recipes():
 def view(id):
     
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(id)})
-    return render_template('view.html', title='View Full Recipe', recipe=recipe)
+    return redirect(url_for('view', id=id))
 
     
 @app.route('/add_recipe')

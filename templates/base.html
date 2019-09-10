@@ -62,11 +62,11 @@
               <a class="collapsible-header red lighten-2 sidebar-menu-style"><i class="material-icons">list</i>Recipe by Categories<i class="material-icons right" style="margin-right:0;">arrow_drop_down</i></a>
               <div class="collapsible-body">
                 <ul>
-                  <li><a class="red lighten-2" href="#">Starter</a></li>
-                  <li><a class="red lighten-2" href="#">Main Dish</a></li>
-                  <li><a class="red lighten-2" href="#">Snacks</a></li>
-                  <li><a class="red lighten-2" href="#">Desserts</a></li>
-                  <li><a class="red lighten-2" href="#">Drinks</a></li>
+                  <li><a class="red lighten-2" href="{{ url_for('get_starter') }}">Starter</a></li>
+                  <li><a class="red lighten-2" href="{{ url_for('get_main') }}">Main Dish</a></li>
+                  <li><a class="red lighten-2" href="{{ url_for('get_snacks') }}">Snacks</a></li>
+                  <li><a class="red lighten-2" href="{{ url_for('get_desserts') }}">Desserts</a></li>
+                  <li><a class="red lighten-2" href="{{ url_for('get_drinks') }}">Drinks</a></li>
                 </ul>
               </div>
             </li>

@@ -22,9 +22,29 @@ def home():
     
 @app.route('/get_recipes', methods=['GET'])
 def get_recipes():
-    return render_template('recipes.html', title='All Recipes', recipes=mongo.db.recipes.find().skip(4 *  (1 - 1)).limit(6))
+    return render_template('recipes.html', title='All Recipes', recipes=mongo.db.recipes.find())
     #db.companies.find().skip(NUMBER_OF_ITEMS * (PAGE_NUMBER - 1)).limit(NUMBER_OF_ITEMS )
+    #return render_template('recipes.html', title='All Recipes', recipes=mongo.db.recipes.find().skip(4 *  (1 - 1)).limit(6))
 
+@app.route('/get_starter', methods=['GET'])
+def get_starter():
+    return render_template('recipes.html', title='Starters', recipes=mongo.db.recipes.find({'recipe_category': 'Starter'}))
+
+@app.route('/get_main', methods=['GET'])
+def get_main():
+    return render_template('recipes.html', title='Main Dish', recipes=mongo.db.recipes.find({'recipe_category': 'Main'}))
+
+@app.route('/get_snacks', methods=['GET'])
+def get_snacks():
+    return render_template('recipes.html', title='Snacks', recipes=mongo.db.recipes.find({'recipe_category': 'Snacks'}))
+
+@app.route('/get_desserts', methods=['GET'])
+def get_desserts():
+    return render_template('recipes.html', title='Desserts', recipes=mongo.db.recipes.find({'recipe_category': 'Dessert'}))
+    
+@app.route('/get_drinks', methods=['GET'])
+def get_drinks():
+    return render_template('recipes.html', title='Desserts', recipes=mongo.db.recipes.find({'recipe_category': 'Drinks'}))    
 
 @app.route('/view/recipe_id?=<id>')
 def view(id):

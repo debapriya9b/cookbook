@@ -40,15 +40,20 @@
             </div>
 
 
-            <div class="row">
+  <div class="row">
                 <div class="input-field col-12">
                     <div class="card background">
                         <div class="card-content">
                             <span class="card-title center whites-4">Ingredients</span>
+                            
                             <div class="new-ingredient ingredient">
+                                {% for ingredient in recipe.recipe_ingredients %}
                                 <i class="material-icons prefix teal-text">format_list_bulleted</i>
-                                <textarea id="recipe_ingredients" name="recipe_ingredients[]" class="directions validate materialize-textarea" placeholder="List each ingredient one per line" required></textarea>
+                                
+                                <textarea id="recipe_ingredients" name="recipe_ingredients[]" class="directions validate materialize-textarea" placeholder=" {{ ingredient }}" required></textarea>
+                                {% endfor %}
                             </div>
+                            
                             <button type="button" class="add-ingredient btn ">
                                     <i class="material-icons">add</i>
                                    </button>
@@ -70,8 +75,11 @@
                         <div class="card-content">
                             <span class="card-title center whites-4">Procedure</span>
                             <div class="new-procedure procedure">
+                                {% for procedure in recipe.recipe_procedure %}
                                 <i class="material-icons prefix teal-text">format_list_bulleted</i>
-                                <textarea id="recipe_procedure" name="recipe_procedure[]" class="directions validate materialize-textarea" placeholder="List each procedure one per line" required></textarea>
+                                <textarea id="recipe_procedure" name="recipe_procedure[]" class="directions validate materialize-textarea" 
+                                placeholder="{{ procedure }}" required></textarea>
+                                 {% endfor %}
                             </div>
                             <button type="button" class="add-procedure btn ">
                                     <i class="material-icons">add</i>
@@ -131,7 +139,7 @@
 
 
             <div class="row">
-                <button class="btn waves-effect waves-light " id="submitButton" type="submit " name="action ">Save<button>
+                <button class="btn waves-effect waves-light " type="submit " name="action ">Save<button>
                     
              <button type="reset" class="btn waves-effect waves-light red"
                         onclick="history.go(-1)">
@@ -148,11 +156,5 @@
 
 </div>
 
-<!--
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const submitButton = document.getElementById('submitButton')
-    })
-</script>
 
 {% endblock %}

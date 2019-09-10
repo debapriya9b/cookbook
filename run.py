@@ -55,13 +55,13 @@ def insert_recipe():
    return redirect(url_for('get_recipes'))
  
  
-@app.route('/edit_recipe/recipe_id?=<id>')
+@app.route('/edit_recipe/recipe_id?=<id>',methods=['GET'])
 def edit_recipe(id):
     # check for logged in user
     #email = session.get('email')
     #if not email:
         #return redirect(url_for('register'))
-        
+
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(id)}) 
     categories=mongo.db.categories.find()
     difficulties=mongo.db.difficulties.find()
@@ -75,8 +75,8 @@ def update_recipe(id):
         {
         'recipe_name':request.form.get('recipe_name'),
         'recipe_description':request.form.get('recipe_description'),
-        'recipe_ingredients':request.form.getlist('recipe_ingredients'),
-        'recipe_procedure':request.form.getlist('recipe_procedure'),
+        'recipe_ingredients':request.form.getlist('recipe_ingredients[]'),
+        'recipe_procedure':request.form.getlist('recipe_procedure[]'),
         'recipe_category':request.form.get('recipe_category'),
         'recipe_time':request.form.get('recipe_time'),
         'recipe_recipe_difficulty_level':request.form.get('recipe_recipe_difficulty_level'),

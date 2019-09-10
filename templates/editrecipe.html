@@ -47,13 +47,12 @@
                             <span class="card-title center whites-4">Ingredients</span>
                             
                             <div class="new-ingredient ingredient">
-                                {% for ingredient in recipe.recipe_ingredients %}
-                                <i class="material-icons prefix teal-text">format_list_bulleted</i>
-                                
-                                <textarea id="recipe_ingredients" name="recipe_ingredients[]" class="directions validate materialize-textarea" placeholder=" {{ ingredient }}" required></textarea>
+{% for ingredient in recipe.recipe_ingredients %}
+<i class="material-icons prefix teal-text">format_list_bulleted</i>
 
-                                {% endfor %}
-                            </div>
+<textarea id="recipe_ingredients" name="recipe_ingredients[]" class="directions validate materialize-textarea" required>{{ ingredient }}</textarea>
+{% endfor %}
+</div>
                             
                             <button type="button" class="add-ingredient btn ">
                                     <i class="material-icons">add</i>
@@ -79,7 +78,7 @@
                                 {% for procedure in recipe.recipe_procedure %}
                                 <i class="material-icons prefix teal-text">format_list_bulleted</i>
                                 <textarea id="recipe_procedure" name="recipe_procedure[]" class="directions validate materialize-textarea" 
-                                placeholder="{{ procedure }}" required></textarea>
+                                 required>{{ procedure }}</textarea>
                                  {% endfor %}
                             </div>
                             <button type="button" class="add-procedure btn ">

@@ -55,6 +55,12 @@ def view(id):
     
 @app.route('/add_recipe')
 def add_recipe():
+    
+    #check for logged in user
+    email = session.get('email')
+    if not email:
+        return redirect(url_for('login'))
+    
     return render_template('addrecipe.html',
     categories=mongo.db.categories.find(),
     difficulties=mongo.db.difficulties.find())
@@ -77,10 +83,10 @@ def insert_recipe():
  
 @app.route('/edit_recipe/recipe_id?=<id>',methods=['GET'])
 def edit_recipe(id):
-    # check for logged in user
-    #email = session.get('email')
-    #if not email:
-        #return redirect(url_for('register'))
+    #check for logged in user
+    email = session.get('email')
+    if not email:
+        return redirect(url_for('login'))
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(id)}) 
     categories=mongo.db.categories.find()

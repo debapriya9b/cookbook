@@ -26,6 +26,12 @@ body {
   font-family:cursive;
 }
 
+.brooks ul{
+  margin-top: 12px;
+  font-size: 15px;
+  line-height: 25px;
+}
+
 /*hr tag*/
 
 hr{ 

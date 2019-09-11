@@ -59,8 +59,8 @@ def add_recipe():
     #check for logged in user
     email = session.get('email')
     if not email:
+        flash('You need to login to add recipe!')
         return redirect(url_for('login'))
-    
     return render_template('addrecipe.html',
     categories=mongo.db.categories.find(),
     difficulties=mongo.db.difficulties.find())
@@ -78,6 +78,7 @@ def insert_recipe():
    del data['recipe_ingredients[]']
    del data['recipe_procedure[]']
    recipes.insert_one(data)
+   flash('Your recipe added!')
    return redirect(url_for('get_recipes'))
  
  
@@ -116,7 +117,8 @@ def update_recipe(id):
     
 @app.route('/delete_recipe/recipe_id?=<id>')
 def delete_recipe(id):
-    # check for logged in user
+    flash('You can only delete your own recipe!')
+        # check for logged in user
     email = session.get('email')
     if not email:
         return redirect(url_for('register'))
@@ -151,13 +153,13 @@ def register():
         email = request.form['email']
         password = request.form['password']
         user = {'name': name, 'email': email, 'password': password}
-
+        flash('Congratulation!!You are registered now!')
         if mongo.db.users.find_one({"email": email}):
             return render_template('register.html', title='Register', error="user_exists")
         else:
             mongo.db.users.insert_one(user)
             return render_template('login.html', title='Login', user=user, password=password)
-
+          
     return render_template('register.html', title='Register')
 
 

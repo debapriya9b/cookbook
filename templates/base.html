@@ -28,7 +28,7 @@
   <nav>
     <div class="nav-wrapper">
       <a href="#" data-activates="mobile-demo" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
-      <a href="{{ url_for('home') }}" class="brand-logo">CookBook</a>
+      <a href="{{ url_for('home') }}" id="brand-logo">CookBook</a>
       <ul class="right">
         
       {% if session['email'] != None %}

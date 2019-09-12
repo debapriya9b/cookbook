@@ -59,7 +59,7 @@ def add_recipe():
     #check for logged in user
     email = session.get('email')
     if not email:
-        flash('You need to login to add recipe!')
+        flash('You need to login to add your recipe!')
         return redirect(url_for('login'))
     return render_template('addrecipe.html',
     categories=mongo.db.categories.find(),
@@ -78,7 +78,7 @@ def insert_recipe():
    del data['recipe_ingredients[]']
    del data['recipe_procedure[]']
    recipes.insert_one(data)
-   flash('Your recipe added!')
+   flash('You have added your recipe successfully!!')
    return redirect(url_for('get_recipes'))
  
  

@@ -23,6 +23,19 @@ a:hover {
   color: #000000;
 }
 
+.login-logout-link li a{
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.login-logout-link li a:hover{
+  color:#000000;
+}
+
+
+
+
 /*Blockquote*/
 
 .brooks {
@@ -43,6 +56,7 @@ a:hover {
   font-size: 15px;
   line-height: 25px;
 }
+
 
 /*hr tag*/
 
@@ -106,11 +120,21 @@ hr{
 
 
 .login-header {
-  font-size: 30px;
+  font-size: 35px;
 }
 
 .register-link{
-  font-size: 30px;
+  font-size: 23px;
+}
+
+.register-link a{
+  font-size: 18px;
+  color: #008080;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  color: #ee6e73;
 }
 
 .content-section {

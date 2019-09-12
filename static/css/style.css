@@ -169,7 +169,10 @@ hr{
    background-color: #ee6e73;
    color: white;
    text-align: center;
-   z-index: 2000;
+   z-index: 10000;
+}
+.footer p{
+  margin-bottom: 6px;
 }
 
 

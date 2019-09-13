@@ -115,16 +115,18 @@ def update_recipe(id):
  
 @app.route('/delete_recipe/recipe_id?=<id>')
 def delete_recipe(id):
-    flash('You can only delete your own recipe!')
+    
         # check for logged in user
     email = session.get('email')
     emailid = mongo.db.users.find({'email': email})
     if not email:
-        return redirect(url_for('register'))
+        flash('You need to login to delete your own recipe!')
+        return redirect(url_for('login'))
     try:
         mongo.db.recipes.delete_one({"_id": ObjectId(id), 'email': emailid})
     except:
-        return redirect(url_for('recipes'))
+        flash('You can only delete your own recipe!')
+        return redirect(url_for('get_recipes'))
     return redirect(url_for('get_recipes'))
     
 

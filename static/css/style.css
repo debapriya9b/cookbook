@@ -187,6 +187,9 @@ hr{
 background-size: cover;
 margin-bottom: 0px;
 padding: 15px 0 0 15px;
+font-size: 25px;
+font-weight: bold;
+font-family: cursive;
 }
 
 .sidenav-header row {
@@ -198,6 +201,9 @@ margin-bottom: 0px;
 padding: 0;
 }
 
+.sidebar-menu-style ul li a{
+  text-decoration: none;
+}
 
 /*section*/
 

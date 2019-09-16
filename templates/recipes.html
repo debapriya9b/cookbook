@@ -3,7 +3,7 @@
                            {% with messages = get_flashed_messages() %}
                                 {% if messages %}
                                         {% for message in messages %}
-                                        <div class="alert alert-danger alert-dismissible fade show col-md-4" role="alert">
+                                        <div class="alert alert-info alert-dismissible fade show col-md-4" role="alert">
                                             <span>{{ message }}</span>
                                          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
@@ -22,7 +22,7 @@
            <br>
             
                   <div class="card">
-                        <img class="card-img-top" src="{{recipe.recipe_image}}" alt="Card image" style="width=250px">
+                        <img class="card-img-top" src="{{recipe.recipe_image}}" alt="Card image" style="opacity: 0.9">
                          <div class="card-body">
                              <h6 class="card-title">"{{recipe.recipe_name}}"</h6>
                              <p class="card-text">"{{recipe.recipe_description}}"</p>

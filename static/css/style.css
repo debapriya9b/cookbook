@@ -287,3 +287,12 @@ margin-left: 0px;
   background-color: #fff;
   color:#ee6e73;
 }
+
+/*Helpre*/
+
+.table-border{
+  border: 2px solid #008080;;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+

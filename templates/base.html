@@ -76,7 +76,7 @@
 
         <li class="red lighten-2 black-text "><a href="{{ url_for('get_recipes') }}" class="waves-effect waves-blue"><i class="material-icons black-text">restaurant_menu</i>All Recipes</a></li>
         <li class="red lighten-2 black-text"><a href="{{ url_for('add_recipe') }}" class="waves-effect waves-blue"><i class="material-icons black-text">add</i>Add Recipe</a></li>
-        <li class="red lighten-2 black-text"><a href="#" class="waves-effect waves-blue"><i class="material-icons black-text">help</i>Helper</a></li>
+        <li class="red lighten-2 black-text"><a href="{{ url_for('get_helper') }}" class="waves-effect waves-blue"><i class="material-icons black-text">help</i>Helper</a></li>
         </li>
       </ul>
 
@@ -97,7 +97,7 @@
     <!--  
     <li><a class="btn-floating teal darken-4" data-toggle="tooltip" title="Logout" href="{{ url_for('logout') }}"><i class="material-icons">person_outline</i></a></li>
     -->
-      <li><a class="btn-floating brown darken-3" data-toggle="tooltip" title="Help"><i class="material-icons">help</i></a></li>
+      <li><a class="btn-floating brown darken-3" data-toggle="tooltip" title="Help" href="{{ url_for('get_helper') }}"><i class="material-icons">help</i></a></li>
     </ul>
   </div>
   <section class="container-fluid section-details">

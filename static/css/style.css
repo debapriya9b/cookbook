@@ -250,6 +250,19 @@ padding: 0;
   text-align: left;
 }
 
+.stats a {
+  font-size: 20px;
+  color: #008080;
+ padding-right: .5rem;
+ padding-bottom: 10px;
+ text-decoration: none;
+ font-weight: bold;
+ }
+ 
+.stats a:hover{
+
+ color: #000000;
+ }
 
 /*
 .recipe-ingredients-list{

@@ -130,6 +130,25 @@ def delete_recipe(id):
     return redirect(url_for('get_recipes'))
     
 
+@app.route('/like/recipe_id?=<id>')
+def like(id):
+    '''Controls behavior of user-like increment and decrements operator.
+    Feature is dependant upon user interaction in the user-interface.'''
+
+    mongo.db.recipes.find_one_and_update({"_id": ObjectId(id)}, {"$inc": {"likes": 1}})
+    return redirect(url_for('get_recipes'))
+
+
+@app.route('/dislike/recipe_id?=<id>')
+def dislike(id):
+    '''Controls behavior of user-dislike increment and decrements operator.
+    Feature is dependant upon user interaction in the user-interface.'''
+    
+    mongo.db.recipes.find_one_and_update({"_id": ObjectId(id)}, {"$inc": {"dislikes": 1}})
+    return redirect(url_for('get_recipes'))
+    
+
+
     
     
     

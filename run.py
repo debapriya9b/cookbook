@@ -1,5 +1,6 @@
 # importing modules
 import os
+import math
 from flask import Flask, render_template, redirect, request, url_for, session, flash
 from flask_pymongo import PyMongo, pymongo
 from bson.objectid import ObjectId
@@ -25,6 +26,8 @@ def get_recipes():
     return render_template('recipes.html', title='All Recipes', recipes=mongo.db.recipes.find())
     #db.companies.find().skip(NUMBER_OF_ITEMS * (PAGE_NUMBER - 1)).limit(NUMBER_OF_ITEMS )
     #return render_template('recipes.html', title='All Recipes', recipes=mongo.db.recipes.find().skip(4 *  (1 - 1)).limit(6))
+
+    
 
 @app.route('/get_starter', methods=['GET'])
 def get_starter():

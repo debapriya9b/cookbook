@@ -17,10 +17,13 @@ body {
   text-align: left;
   text-decoration: none;
   font-size: 30px;
-  font-family:cursive;
 }
 a:hover {
   color: #000000;
+}
+
+.logo-cookbook span{
+  font-family: cursive+;
 }
 
 .login-logout-link li a{
@@ -234,7 +237,7 @@ padding: 0;
   text-align: center;
 }
 .recipe-description-details{
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .recipe-options{

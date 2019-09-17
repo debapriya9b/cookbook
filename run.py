@@ -207,6 +207,7 @@ def login():
         print(session.get('email'))
         user = mongo.db.users.find_one({"email": email})
         if user is None:
+            flash('You have to Register first!')
             return redirect(url_for("register"))
         session['name'] = user['name']
         try:

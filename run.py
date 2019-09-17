@@ -114,7 +114,7 @@ def update_recipe(id):
         'recipe_procedure':request.form.getlist('recipe_procedure[]'),
         'recipe_category':request.form.get('recipe_category'),
         'recipe_time':request.form.get('recipe_time'),
-        'recipe_recipe_difficulty_level':request.form.get('recipe_recipe_difficulty_level'),
+        'recipe_difficulty_level':request.form.get('recipe_difficulty_level'),
         'recipe_author':request.form.get('recipe_author'),
         'recipe_image':request.form.get('recipe_image')
     })
@@ -131,6 +131,7 @@ def delete_recipe(id):
         flash('You need to login to delete your own recipe!')
         return redirect(url_for('login'))
     try:
+        flash('Your recipe has been deleted!')
         mongo.db.recipes.delete_one({"_id": ObjectId(id), 'recipe_author': name})
     except:
         flash('You can only delete your own recipe!')

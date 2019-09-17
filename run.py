@@ -125,13 +125,13 @@ def update_recipe(id):
 def delete_recipe(id):
     
         # check for logged in user
-    email = session.get('email')
-    emailid = mongo.db.users.find({'email': email})
-    if not email:
+    name = session.get('name')
+    nameid = mongo.db.users.find({'username': name})
+    if not name:
         flash('You need to login to delete your own recipe!')
         return redirect(url_for('login'))
     try:
-        mongo.db.recipes.delete_one({"_id": ObjectId(id), 'email': emailid})
+        mongo.db.recipes.delete_one({"_id": ObjectId(id), 'recipe_author': name})
     except:
         flash('You can only delete your own recipe!')
         return redirect(url_for('get_recipes'))
@@ -197,14 +197,16 @@ def register():
 def login():
     # check for logged in user
     email = session.get('email')
+    print(session.get('email'))
     if email:
         return redirect(url_for('register'))
 
     user = None
     if request.method == 'POST':
         email = request.form["email"]
+        print(session.get('email'))
         user = mongo.db.users.find_one({"email": email})
-
+        session['name'] = user['name']
         try:
             assert(user["password"] == request.form["password"])
         except (AssertionError, TypeError):
@@ -215,6 +217,7 @@ def login():
             except KeyError:
                 session['name'] = 'John Doe'
             session['email'] = email
+            print(session.get('email'))
             return redirect(url_for("home"))
 
     return render_template('login.html', title='Login', user=user)
@@ -223,6 +226,7 @@ def login():
     
 @app.route('/logout')
 def logout():
+    print("I was here")
     #  logout user and clear session
     session['email'] = None
     session['name'] = None

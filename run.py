@@ -201,12 +201,13 @@ def login():
     print(session.get('email'))
     if email:
         return redirect(url_for('register'))
-
     user = None
     if request.method == 'POST':
         email = request.form["email"]
         print(session.get('email'))
         user = mongo.db.users.find_one({"email": email})
+        if user is None:
+            return redirect(url_for("register"))
         session['name'] = user['name']
         try:
             assert(user["password"] == request.form["password"])
@@ -220,7 +221,6 @@ def login():
             session['email'] = email
             print(session.get('email'))
             return redirect(url_for("home"))
-
     return render_template('login.html', title='Login', user=user)
 
     

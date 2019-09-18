@@ -81,3 +81,28 @@ I've used Microsoft Word to create my wireframe / mock-up.
 ## Technologies Used
 
 - [GitHub](https://github.com/) - Used as remote storage of my code online.
+
+### Front-End Technologies
+
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) - Used as the base for markup text.
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3) - Used as the base for cascading styles.
+- [jQuery](https://code.jquery.com/jquery/) - Used as the primary JavaScript functionality.
+- [Materialize](https://materializecss.com/) - Used as the design framework.
+- [Bootstrap](https://getbootstrap.com/) - Used as the design framework.
+
+
+### Back-End Technologies
+
+- **Flask**
+    - [Flask 1.0.2](http://flask.pocoo.org/) - Used as a microframework.
+    - [Jinja 2.10](http://jinja.pocoo.org/docs/2.10/) - Used for templating with Flask.
+    - [Werkzeug 0.14](https://werkzeug.palletsprojects.com/en/0.14.x/) - Used for password hashing, authentication, and authorization.
+- **Heroku**
+    - [Heroku](https://www.heroku.com) - Used for app hosting.
+- **Python**    
+    - [Python 3.6.7](https://www.python.org/) - Used as the back-end programming language.
+    - [MongoDB Atlas](https://www.mongodb.com/) - Used to store my database in the 'cloud'.
+    - [PyMongo 3.8.0](https://api.mongodb.com/python/current/) - Used as the Python API for MongoDB.
+
+
+

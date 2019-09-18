@@ -7,8 +7,6 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">
-
-
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <!-- Links for Materializecss-->
@@ -26,27 +24,28 @@
 
 <body>
 
+  <!--Navigation-->
   <nav>
     <div class="nav-wrapper">
       <a href="#" data-activates="mobile-demo" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
       <a href="{{ url_for('home') }}" id="brand-logo" class="logo-cookbook">Cook<span>Book</span></a>
       <ul class="right login-logout-link">
-        
-      {% if session['email'] != None %}
-      
-      <li>Hello {{ session['name'] }}! </li>
-        <li><a href="{{ url_for('logout') }}">Logout</a></li>
-        
-      {% else %}
-      
-       <li><a href="{{ url_for('login') }}">Login</a></li> 
-        
-      {% endif %} 
-        
-      </ul>
+        <!--If user is logged in,then Logout Link will show,otherwise Login Link-->
+        {% if session['email'] != None %}
 
+        <li>Hello {{ session['name'] }}! </li>
+        <li><a href="{{ url_for('logout') }}">Logout</a></li>
+
+        {% else %}
+
+        <li><a href="{{ url_for('login') }}">Login</a></li>
+
+        {% endif %}
+
+      </ul>
       <ul class="side-nav red lighten-2" id="mobile-demo">
 
+<!--Side-Navigation-->
 
         <li class="sidenav-header red lighten-2 black-text">
           <div class="row">
@@ -85,6 +84,7 @@
 
 
   <!-- Navbar:Floating Action Button-->
+  
   <div class="fixed-action-btn">
     <a class="btn-floating btn-large red">
     <i class="large material-icons">dehaze</i>
@@ -94,111 +94,117 @@
       <li><a class="btn-floating yellow darken-1" data-toggle="tooltip" title="All Recipes" href="{{ url_for('get_recipes') }}"><i class="material-icons">restaurant_menu</i></a></li>
       <li><a class="btn-floating blue" data-toggle="tooltip" title="Login" href="{{ url_for('login') }}"><i class="material-icons">account_circle</i></a></li>
       <li><a class="btn-floating green" data-toggle="tooltip" title="Add Recipe" href="{{ url_for('add_recipe') }}"><i class="material-icons">add</i></a></li>
-    <!--  
-    <li><a class="btn-floating teal darken-4" data-toggle="tooltip" title="Logout" href="{{ url_for('logout') }}"><i class="material-icons">person_outline</i></a></li>
-    -->
       <li><a class="btn-floating brown darken-3" data-toggle="tooltip" title="Help" href="{{ url_for('get_helper') }}"><i class="material-icons">help</i></a></li>
     </ul>
   </div>
+ <!--Navigation ends here--> 
+ 
+ <!--Section-->
+  
   <section class="container-fluid section-details">
-  <div>
-    {% block content %} {% endblock %}
-  </div>
-</section>
+    <div>
+      {% block content %} {% endblock %}
+    </div>
+  </section>
+  
+ <!--Section ends here-->  
+ 
+<!--Footer-->
+  
   <div class="footer">
-  <div>
-            &copy; Debapriya Bhattacharya 2019
-   </div>
-</div>
+    <div>
+      &copy; Debapriya Bhattacharya 2019
+    </div>
+  </div>
+  
+<!--Footer ends here-->
+
+  <!-- JS,jQuery Links for Materializecss,Bootstrap JS-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<!-- JS Queries-->
+
+  <script>
+  
+// Homepage Slider
+
+    $(document).ready(function() {
+      $('.slider').slider();
+    });
+    // Pause slider
+    $('.slider').slider('pause');
+    // Start slider
+    $('.slider').slider('start');
+    // Next slide
+    $('.slider').slider('next');
+    // Previous slide
+    $('.slider').slider('prev');
+    $(document).ready(function() {
+      $('.fixed-action-btn').floatingActionButton();
+      $('[data-toggle="tooltip"]').tooltip();
+    });
 
 
-<!-- JS,jQuery Links for Materializecss,Bootstrap JS-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    
-    
-    
-    <script>
-      $(document).ready(function() {
-        $('.slider').slider();
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.slider');
+      var instances = M.Slider.init(elems, options);
+    });
+
+// Sidebar-Navbar
+
+    $(document).ready(function() {
+      $('.button-collapse').sideNav({
+        menuWidth: 300, // Default is 300
+        edge: 'left', // Choose the horizontal origin
+        closeOnClick: false, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+        draggable: true // Choose whether you can drag to open on touch screens
       });
-      // Pause slider
-      $('.slider').slider('pause');
-      // Start slider
-      $('.slider').slider('start');
-      // Next slide
-      $('.slider').slider('next');
-      // Previous slide
-      $('.slider').slider('prev');
-      $(document).ready(function() {
-        $('.fixed-action-btn').floatingActionButton();
-        $('[data-toggle="tooltip"]').tooltip();  
-      });
-     
-      
-      document.addEventListener('DOMContentLoaded', function() {
-        var elems = document.querySelectorAll('.slider');
-        var instances = M.Slider.init(elems, options);
-      });
-      
-      
-      
-      // SIDEBAR
-      $(document).ready(function() {
-        $('.button-collapse').sideNav({
-          menuWidth: 300, // Default is 300
-          edge: 'left', // Choose the horizontal origin
-          closeOnClick: false, // Closes side-nav on <a> clicks, useful for Angular/Meteor
-          draggable: true // Choose whether you can drag to open on touch screens
-        });
-      });
-      
-      
-     // Add Ingredients-Add recipe
-     
-     var directionCount = $(".ingredient").length;
+    });
+
+
+// Add Ingredients-Add recipe
+
+    var directionCount = $(".ingredient").length;
     /* add new cloned item */
-    $(".add-ingredient").on("click", function () {
-        /* clone and remove existing values */
-        $(".new-ingredient:first").clone().insertBefore(".add-ingredient").find("input[type='text'], select, textarea").val("");
-        /* increase counter so original direction is never removed */
-        directionCount += 1;
+    $(".add-ingredient").on("click", function() {
+      /* clone and remove existing values */
+      $(".new-ingredient:first").clone().insertBefore(".add-ingredient").find("input[type='text'], select, textarea").val("");
+      /* increase counter so original direction is never removed */
+      directionCount += 1;
     });
     /* delete last cloned item */
-    $(".remove-ingredient").on("click", function () {
-        if (directionCount > 1) {
-            /* only remove the :last item */
-            $(this).siblings(".new-ingredient:last").remove();
-            /* ensure original direction line never gets deleted */
-            directionCount -= 1;
-        }
+    $(".remove-ingredient").on("click", function() {
+      if (directionCount > 1) {
+        /* only remove the :last item */
+        $(this).siblings(".new-ingredient:last").remove();
+        /* ensure original direction line never gets deleted */
+        directionCount -= 1;
+      }
     });
 
 
 // Add Procedure-Add recipe
-     
-     var directionCount = $(".procedure").length;
+
+    var directionCount = $(".procedure").length;
     /* add new cloned item */
-    $(".add-procedure").on("click", function () {
-        /* clone and remove existing values */
-        $(".new-procedure:first").clone().insertBefore(".add-procedure").find("input[type='text'], select, textarea").val("");
-        /* increase counter so original direction is never removed */
-        directionCount += 1;
+    $(".add-procedure").on("click", function() {
+      /* clone and remove existing values */
+      $(".new-procedure:first").clone().insertBefore(".add-procedure").find("input[type='text'], select, textarea").val("");
+      /* increase counter so original direction is never removed */
+      directionCount += 1;
     });
     /* delete last cloned item */
-    $(".remove-procedure").on("click", function () {
-        if (directionCount > 1) {
-            /* only remove the :last item */
-            $(this).siblings(".new-procedure:last").remove();
-            /* ensure original direction line never gets deleted */
-            directionCount -= 1;
-        }
+    $(".remove-procedure").on("click", function() {
+      if (directionCount > 1) {
+        /* only remove the :last item */
+        $(this).siblings(".new-procedure:last").remove();
+        /* ensure original direction line never gets deleted */
+        directionCount -= 1;
+      }
     });
-
-
-
   </script>
 </body>
 

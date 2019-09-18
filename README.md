@@ -28,12 +28,35 @@ I have decided to build a Cookbook, since I personally love food and always try 
 
 ### User Stories
 
-- "I love cooking!Whenever I come across a good recipe I note it down.But it is very difficult to access those recipes all the time,you cannot carry your cooking book everywhere.Right?So I it will be great if I can have it online in one place."
+- "I love cooking!Whenever I come across a good recipe I note it down.But it is very difficult to access those recipes all the time,you cannot carry your cooking book everywhere.Right?So it will be great if I can have it online in one place."
 - "I want to view the site from any device like mobile,tablet,laptop"
 - "Is it possible to view all the recipes without registering or logging in?"
 - "What if I post my recipe and later want to change it or delete it?"
 - "I am not that computer savy,so cannot use a very complicated website."
 - "I love cooking but those measurements are always confusing for me.If I get a quick reference where I can see the standard cooking conversion table it will be great"
+
+---
+
+## Design
+
+### Framework
+
+- [Materialize](http://archives.materializecss.com/0.100.2/)
+    - To give a modern and clean layout.
+    
+- [Bootstrap](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
+    - Easy to use.Easy documentation.
+
+- [jQuery 3.4.0](https://code.jquery.com/jquery/)
+    - Used to simplify some of the DOM minipulations.
+    
+- [Flask 1.0.2](http://flask.pocoo.org/)
+    - Flask is a microframework that I've used to render the back-end Python with the front-end Materialize and Bootstrap 4.
+
+### Color Scheme
+
+The concept for Cookbook is to make cooking fun and easy, so to keep the overall site welcoming, I have opted for a bright and colorful color scheme. These standard [Materialize Colors](http://archives.materializecss.com/0.100.2/color.html) work quite well for my project.
+
 
 
 

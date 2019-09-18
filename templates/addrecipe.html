@@ -9,13 +9,23 @@
         <form action="{{ url_for('insert_recipe') }}" method="POST" class="col s12">
             <div class="row">
                 <div class="input-field col-sm-12 col-md-6">
+                   {% if session['email'] != None %}
                     <i class="material-icons prefix teal-text">account_circle</i>
-                    <input placeholder="What's your name?" id="recipe_author" name="recipe_author" type="text" class="validate" required>
+                    <textarea name="recipe_author" id="recipe_author" class="materialize-textarea" required>{{ session['name'] }}</textarea>
                     <label for="icon_prefix">Author</label>
+                
+                {% else %}
+                    
+                    <i class="material-icons prefix teal-text">account_circle</i>
+                    <textarea placeholder="Author name" name="recipe_author" id="recipe_author" class="materialize-textarea" required></textarea>
+                    <label for="icon_prefix">Author</label>
+                
+                {% endif %} 
+                
                 </div>
                 <div class="input-field col-sm-12 col-md-6">
                     <i class="material-icons prefix teal-text">restaurant_menu</i>
-                    <input placeholder="Which Recipe you want to share with us?" id="recipe_name" name="recipe_name" type="text" class="validate" required>
+                    <textarea placeholder="Which recipe you want to share with us?" name="recipe_name" id="recipe_name" class="materialize-textarea" required></textarea>
                     <label for="icon_prefix">Recipe Name</label>
                 </div>
 

@@ -24,7 +24,6 @@ mongo = PyMongo(app)
 def home():
     return render_template('home.html', title='Home', recipes=mongo.db.recipes.find().sort('likes', pymongo.DESCENDING).limit(4))
 
-
 #Page to view all recipes
     
 @app.route('/get_recipes', methods=['GET'])

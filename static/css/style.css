@@ -13,6 +13,7 @@ body {
   min-height: 100vh;
 }
 /*Navbar*/
+
 #brand-logo{
   text-align: left;
   text-decoration: none;
@@ -23,7 +24,7 @@ a:hover {
 }
 
 .logo-cookbook span{
-  font-family: cursive+;
+  font-family: cursive;
 }
 
 .login-logout-link li a{
@@ -35,8 +36,6 @@ a:hover {
 .login-logout-link li a:hover{
   color:#000000;
 }
-
-
 
 
 /*Blockquote*/
@@ -60,8 +59,7 @@ a:hover {
   line-height: 25px;
 }
 
-
-/*hr tag*/
+/*Hr tag*/
 
 hr{ 
   height:1.5px;
@@ -113,10 +111,6 @@ hr{
   max-height: 300px;
   width: auto;
 }
-
-
-
-
 
 
 /*Login Page*/
@@ -178,36 +172,36 @@ hr{
   margin-bottom: 6px;
 }
 
+/* Fix sidenav spacing*/
 
-/* FIX SIDENAV SPACING*/
 .side-nav li>a {
   padding: 0 16px;
 }
 
+/* Sidenav bar*/
 
-/* SIDENAV HEADER*/
 .sidenav-header {
-background-size: cover;
-margin-bottom: 0px;
-padding: 15px 0 0 15px;
-font-size: 25px;
-font-weight: bold;
+  background-size: cover;
+  margin-bottom: 0px;
+  padding: 15px 0 0 15px;
+  font-size: 25px;
+  font-weight: bold;
 }
 
 .sidenav-header row {
-    margin-bottom: 0;
-  }
+  margin-bottom: 0;
+}
 
 .sidenav-footer {
-margin-bottom: 0px;
-padding: 0;
+  margin-bottom: 0px;
+  padding: 0;
 }
 
 .sidebar-menu-style ul li a{
   text-decoration: none;
 }
 
-/*section*/
+/*Section:Base.html*/
 
 .section-details{
   margin-top: 30px;
@@ -216,7 +210,7 @@ padding: 0;
 /*Floating Button*/
 
 .fixed-action-btn {
-    bottom: 50px;
+  bottom: 50px;
 }
 
 .full-recipe-button{
@@ -228,7 +222,7 @@ padding: 0;
 
 .recipe-view-header{
   text-align: center;
-    font-size: 45px;
+  font-size: 45px;
   font-weight: bolder;
 }
 
@@ -255,30 +249,23 @@ padding: 0;
 .stats a {
   font-size: 20px;
   color: #008080;
- padding-right: .5rem;
- padding-bottom: 10px;
- text-decoration: none;
- font-weight: bold;
- }
+  padding-right: .5rem;
+  padding-bottom: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
  
 .stats a:hover{
  color: #000000;
- }
- 
-
-/*
-.recipe-ingredients-list{
-  list-style-type: circle;
-}*/
+}
 
 .recipe-procedure-divider{
   height:1.5px;
   color: #ee6e73;
   background-color: #ee6e73;
   border: none;
-margin-left: 0px;
+  margin-left: 0px;
 }
-
 
 /*All Recipe*/
 
@@ -290,26 +277,7 @@ margin-left: 0px;
 /*Helper*/
 
 .table-border{
-  border: 2px solid #008080;;
+  border: 2px solid #008080;
   border-radius: 8px;
   margin-top: 10px;
-}
-
-/*Pagination*/
-
-
-.pagination-page-info {
-    padding: .6em;
-    padding-left: 0;
-    width: 40em;
-    margin: .5em;
-    margin-left: 0;
-    font-size: 12px;
-}
-.pagination-page-info b {
-    color: black;
-    background: #6aa6ed;
-    padding-left: 2px;
-    padding: .1em .25em;
-    font-size: 150%;
 }

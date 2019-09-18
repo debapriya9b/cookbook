@@ -1,5 +1,7 @@
 {% extends 'base.html' %} {% block content %}
 
+<!-- Flash messages-->
+
  {% with messages = get_flashed_messages() %}
                                 {% if messages %}
                                         {% for message in messages %}
@@ -14,6 +16,8 @@
                                 {% endif %}
                             {% endwith %}
 
+<!-- Login form-->
+<!-- If user input for email and password mismatch, user will get an error message -->
 
 <section class="section section-login light-grayish-cyan">
         <div class="container">
@@ -27,7 +31,7 @@
                         </p>
                         <form action="{{ url_for('login') }}" method="POST">
                             {% if error == 'incorrect_login' %}
-                                <span style="color: red;">Your login details were incorrect.</span>
+                                <span style="color: red">Your login details are incorrect.</span>
                             {% endif %}
                             <div class="input-field">
                                 <i class="slightly-desaturated-cyan-2 material-icons prefix">email</i>

@@ -104,5 +104,49 @@ I've used Microsoft Word to create my wireframe / mock-up.
     - [MongoDB Atlas](https://www.mongodb.com/) - Used to store my database in the 'cloud'.
     - [PyMongo 3.8.0](https://api.mongodb.com/python/current/) - Used as the Python API for MongoDB.
 
+---
+
+## Testing
+
+Testing was performed in 2 different ways.  
+1. Manual Browser Testing during develoment  
+2. User testing
+
+#### Browser Testing
+
+While my main choice of browser for development is google chrome, I regularly checked the performance on firefox and opera browsers. 
+Making use of browser resizing and dev tools device toolbars on each browser to test responsiveness and how how the grid, fonts and media queries were performing and the consistency between each. Adjusting to find a happy medium for all three. 
+
+After I had test deployed the site to heroku I was able to see the real life versions which I was able to test on android phone, amazon fire tablet and different orientations. Unfortunitely, I have no safari devices which I am able test on.
+
+####  User testing
+
+I have asked multiple friends to test the website on their devices and recieved very little feedback on errors indicating that there was not many issues to be found. I am satisfied with the outcome.
+
+####  Manual Teating
+
+**Creating an Account**
+
+I've created my own personal account. In addition, I've tested with about 10 fake accounts in order to confirm authentication and validation worked as expected.
+
+**Add | Edit | Delete a Recipe**
+
+In addition to my personal recipes, I've created about 10 test recipes, mostly *Abcd*, *Efgh* in order to check the add recipe functionality,flash message functionality etc. These recipes were created using my actual account, and several test accounts.
+
+For several recipes, I've edited minor things like the recipe description, adding additional ingredients or directions, to test the functionality of updating a recipe to the database.Even deleted fake recipes to check the delete functionality.
+
+---
+
+### Validators
+
+---
+
+## Deployment
+
+---
+
+## Credits
+
+
 
 

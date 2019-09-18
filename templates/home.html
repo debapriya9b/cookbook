@@ -1,6 +1,6 @@
 {% extends 'base.html' %} {% block content %}
 
-<!--image carousel-->
+<!--Image carousel-->
 
 
 <div class="container-fluid">
@@ -35,6 +35,9 @@
         </ul>
       </div>
     </div>
+
+    <!--Side panel to explain how Cookbook works-->
+
     <div class="col-sm-6 col-md-4">
       <div class="container-fluid">
         <blockquote class="brooks">
@@ -48,40 +51,41 @@
             <li><i class="material-icons prefix teal-text">check</i>Don't like your recipe anymore!...Delete it!Only your own recipes....ok <i class="material-icons prefix black-text tiny">tag_faces</i></li>
             <li><i class="material-icons prefix teal-text">check</i>Looking recipe for a particular Meal? Search by Category from side-nav bar!</li>
             <li><i class="material-icons prefix teal-text">check</i>Aaah!! Confused with the measurements?....we have a helper just for you!</li>
-
-            
           </ul>
         </blockquote>
       </div>
     </div>
-    
+
   </div>
 </div>
 
 <hr>
- <section class="container-fluid">
-        <div class="row">
-            <h5 class="center-align">Most Liked Recipes</h5>
-        </div>
 
-        <div class="row--recipes">
+<!--Most liked recipes:image card display.Here top 4 most liked(by users) recipes have been displayed-->
 
-            {% for recipe in recipes %}
-                
-                <!-- IMAGE CARD -->
-                <article class="recipe-card">
-                    <a href="{{ url_for('view', id=recipe._id) }}" class="recipe-card__thumbnail-container">
+<section class="container-fluid">
+  <div class="row">
+    <h5 class="center-align">Most Liked Recipes</h5>
+  </div>
+
+  <div class="row--recipes">
+
+    {% for recipe in recipes %}
+
+    <!-- Image Card -->
+    <article class="recipe-card">
+      <a href="{{ url_for('view', id=recipe._id) }}" class="recipe-card__thumbnail-container">
                         <img src="{{recipe.recipe_image}}" width="800" height="600" class="recipe-card__thumbnail">
                     </a>
-                    <div class="collection-item avatar">
-                        <span class="title truncate three-hundred">{{recipe.recipe_name}}</span>
-                        
-                        <p class="recipe-card-quick-details">Likes: {{recipe.likes}} | Cooking Time: {{recipe.recipe_time}}</p>
-                    </div>
-                </article>
-            {% endfor %} 
-        
-        </div>
-      <br><br><br>
-    </section>
-  {% endblock content %}
+      <div class="collection-item avatar">
+        <span class="title truncate three-hundred">{{recipe.recipe_name}}</span>
+        <p class="recipe-card-quick-details">Likes: {{recipe.likes}} | Cooking Time: {{recipe.recipe_time}}</p>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+  <br><br><br>
+</section>
+
+
+{% endblock content %}

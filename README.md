@@ -57,11 +57,27 @@ I have decided to build a Cookbook, since I personally love food and always try 
 
 The concept for Cookbook is to make cooking fun and easy, so to keep the overall site welcoming, I have opted for a bright and colorful color scheme. These standard [Materialize Colors](http://archives.materializecss.com/0.100.2/color.html) work quite well for my project.
 
+### Icon
+
+[Materialize Colors](http://archives.materializecss.com/0.100.2/icons.html) has been used for this project.
+
+---
+
+## Wireframes
+
+I've used Microsoft Word to create my wireframe / mock-up.
+
+---
+
+## Features
+
+### Existing Features
+
+### Features Left to Implement
 
 
+---
 
+## Technologies Used
 
-
-
-
-
+- [GitHub](https://github.com/) - Used as remote storage of my code online.

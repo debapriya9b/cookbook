@@ -1,13 +1,14 @@
-# importing modules
+# Importing modules
 import os
 import math
 from flask import Flask, render_template, redirect, request, url_for, session, flash
 from flask_pymongo import PyMongo, pymongo
 from bson.objectid import ObjectId
 
-# declaring app name
+# Declaring app name
 app = Flask(__name__)
 
+# Config settings and environmental variables
 app.config["SECRET_KEY"] = '7473f88e01ba1bf3f40ce59c38d644ff'
 
 app.config["MONGO_DBNAME"] = 'cookbook'
@@ -15,20 +16,23 @@ app.config["MONGO_URI"] = 'mongodb+srv://debapriya9b:Chotolok10@myfirstcluster-b
 
 mongo = PyMongo(app)
 
+#For CRUD- Functionality- Read
+#Home
 
 @app.route('/')
 @app.route('/home')
 def home():
     return render_template('home.html', title='Home', recipes=mongo.db.recipes.find().sort('likes', pymongo.DESCENDING).limit(4))
+
+
+#Page to view all recipes
     
 @app.route('/get_recipes', methods=['GET'])
 def get_recipes():
     return render_template('recipes.html', title='All Recipes', recipes=mongo.db.recipes.find())
-    #db.companies.find().skip(NUMBER_OF_ITEMS * (PAGE_NUMBER - 1)).limit(NUMBER_OF_ITEMS )
-    #return render_template('recipes.html', title='All Recipes', recipes=mongo.db.recipes.find().skip(4 *  (1 - 1)).limit(6))
-
     
-
+#Filters for Side-Navigation
+    
 @app.route('/get_starter', methods=['GET'])
 def get_starter():
     return render_template('recipes.html', title='Starters', recipes=mongo.db.recipes.find({'recipe_category': 'Starter'}))
@@ -49,18 +53,21 @@ def get_desserts():
 def get_drinks():
     return render_template('recipes.html', title='Drinks', recipes=mongo.db.recipes.find({'recipe_category': 'Drinks'}))    
 
+#Helper
+
 @app.route('/get_helper')
 def get_helper():
     return render_template('helper.html', title='Measurement-helper') 
 
-
+#To view a particular recipe
 
 @app.route('/view/recipe_id?=<id>')
 def view(id):
-    
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(id)})
     return render_template('view.html', title='View Full Recipe', recipe=recipe)
 
+#For CRUD- Functionality- Create
+#To add a particular recipe
     
 @app.route('/add_recipe')
 def add_recipe():
@@ -89,7 +96,9 @@ def insert_recipe():
    recipes.insert_one(data)
    flash('You have added your recipe successfully!!')
    return redirect(url_for('get_recipes'))
- 
+
+#For CRUD- Functionality- Update
+#To Edit a particular recipe and update
  
 @app.route('/edit_recipe/recipe_id?=<id>',methods=['GET'])
 def edit_recipe(id):
@@ -121,6 +130,10 @@ def update_recipe(id):
     })
     
     return redirect(url_for('view', id=id))
+
+
+#For CRUD- Functionality- Delete
+#To Delet a particular recipe
  
 @app.route('/delete_recipe/recipe_id?=<id>')
 def delete_recipe(id):
@@ -139,7 +152,7 @@ def delete_recipe(id):
         return redirect(url_for('get_recipes'))
     return redirect(url_for('get_recipes'))
     
-
+#User to like a recipe
 @app.route('/like/recipe_id?=<id>')
 def like(id):
     '''Controls behavior of user-like increment and decrements operator.
@@ -148,7 +161,7 @@ def like(id):
     mongo.db.recipes.find_one_and_update({"_id": ObjectId(id)}, {"$inc": {"likes": 1}})
     return redirect(url_for('get_recipes'))
 
-
+#User to dislike a recipe
 @app.route('/dislike/recipe_id?=<id>')
 def dislike(id):
     '''Controls behavior of user-dislike increment and decrements operator.
@@ -157,11 +170,7 @@ def dislike(id):
     mongo.db.recipes.find_one_and_update({"_id": ObjectId(id)}, {"$inc": {"dislikes": 1}})
     return redirect(url_for('get_recipes'))
     
-
-
-    
-    
-    
+#User Registration
 
 @app.route('/register', methods=['POST', 'GET'])
 def register():
@@ -194,6 +203,7 @@ def register():
           
     return render_template('register.html', title='Register')
 
+#User Login
 
 @app.route('/login', methods=['POST', 'GET'])
 def login():
@@ -225,7 +235,7 @@ def login():
             return redirect(url_for("home"))
     return render_template('login.html', title='Login', user=user)
 
-    
+#User Logout    
     
 @app.route('/logout')
 def logout():
@@ -236,7 +246,7 @@ def logout():
     # session.clear()
     return redirect(url_for('home'))
 
-
+#During development, IP is localhost, PORT is 5000 and DEBUG is set to True.
 
 if __name__=='__main__':
     app.run(host=os.environ.get('IP'),

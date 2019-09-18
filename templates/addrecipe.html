@@ -3,26 +3,25 @@
 <div class="container">
 
     <h5>Add New Recipe</h5>
-
+<!--Recipe Author-->
 
     <div class="row">
         <form action="{{ url_for('insert_recipe') }}" method="POST" class="col s12">
             <div class="row">
                 <div class="input-field col-sm-12 col-md-6">
-                   {% if session['email'] != None %}
+                    <!--By default the username will be taken as Recipe Author-->
+                    {% if session['email'] != None %}
                     <i class="material-icons prefix teal-text">account_circle</i>
                     <textarea name="recipe_author" id="recipe_author" class="materialize-textarea" required>{{ session['name'] }}</textarea>
-                    <label for="icon_prefix">Author</label>
-                
-                {% else %}
-                    
+                    <label for="icon_prefix">Author</label> 
+                    {% else %}
+
                     <i class="material-icons prefix teal-text">account_circle</i>
                     <textarea placeholder="Author name" name="recipe_author" id="recipe_author" class="materialize-textarea" required></textarea>
-                    <label for="icon_prefix">Author</label>
-                
-                {% endif %} 
-                
+                    <label for="icon_prefix">Author</label> 
+                    {% endif %}
                 </div>
+ <!--Recipe Nmae-->
                 <div class="input-field col-sm-12 col-md-6">
                     <i class="material-icons prefix teal-text">restaurant_menu</i>
                     <textarea placeholder="Which recipe you want to share with us?" name="recipe_name" id="recipe_name" class="materialize-textarea" required></textarea>
@@ -31,7 +30,7 @@
 
             </div>
 
-
+<!--Recipe Description-->
             <div class="row">
                 <div class="input-field col-sm-12 col-md-12">
                     <i class="material-icons prefix teal-text">description</i>
@@ -40,7 +39,7 @@
                 </div>
             </div>
 
-
+<!--Recipe Image-->
             <div class="row">
                 <div class="input-field col-12">
                     <i class="material-icons prefix teal-text">image</i>
@@ -49,7 +48,7 @@
                 </div>
             </div>
 
-
+<!--Recipe Ingredients-->
             <div class="row">
                 <div class="input-field col-12">
                     <div class="card background">
@@ -73,7 +72,7 @@
                 </div>
             </div>
 
-
+<!--Recipe Procedure-->
             <div class="row">
                 <div class="input-field col-12">
                     <div class="card background">
@@ -97,7 +96,7 @@
                 </div>
             </div>
 
-
+<!--Recipe Preparation Time-->
             <div class="row">
                 <div class="input-field col-sm-12 col-md-4">
                     <i class="material-icons prefix teal-text">access_time</i>
@@ -105,7 +104,7 @@
                     <label for="icon_prefix">Preparation Time</label>
                 </div>
 
-
+<!--Recipe Category-->
 
                 <div class="input-field col-sm-12 col-md-4">
                     <div class="form-group">
@@ -118,7 +117,7 @@
                     </div>
                 </div>
 
-
+<!--Recipe Difficulty Level-->
                 <div class="input-field col-sm-12 col-md-4">
                     <div class="form-group">
                         <select class="form-control" id="difficulty" name="recipe_difficulty_level">
@@ -131,7 +130,7 @@
                 </div>
             </div>
 
-
+<!--Button to add recipe-->
             <div class="row">
                 <button class="btn waves-effect waves-light " type="submit " name="action ">Add Recipe</button>
             </div>

@@ -44,15 +44,16 @@ def get_snacks():
 @app.route('/get_desserts', methods=['GET'])
 def get_desserts():
     return render_template('recipes.html', title='Desserts', recipes=mongo.db.recipes.find({'recipe_category': 'Dessert'}))
- 
-@app.route('/get_helper')
-def get_helper():
-    return render_template('helper.html', title='Measurement-helper') 
- 
     
 @app.route('/get_drinks', methods=['GET'])
 def get_drinks():
-    return render_template('recipes.html', title='Desserts', recipes=mongo.db.recipes.find({'recipe_category': 'Drinks'}))    
+    return render_template('recipes.html', title='Drinks', recipes=mongo.db.recipes.find({'recipe_category': 'Drinks'}))    
+
+@app.route('/get_helper')
+def get_helper():
+    return render_template('helper.html', title='Measurement-helper') 
+
+
 
 @app.route('/view/recipe_id?=<id>')
 def view(id):

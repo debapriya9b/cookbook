@@ -193,7 +193,6 @@ def register():
         email = request.form['email']
         password = request.form['password']
         user = {'name': name, 'email': email, 'password': password}
-        flash('Congratulation!!You are registered now!')
         if mongo.db.users.find_one({"email": email}):
             return render_template('register.html', title='Register', error="user_exists")
         else:

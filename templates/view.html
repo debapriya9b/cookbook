@@ -1,5 +1,7 @@
 {% extends 'base.html' %} {% block content %} 
 
+<!-- View for a particular recipe details, when clicked on the same-->
+
 <div class="container-fluid">
             <div class="col 12 recipe-view-header">
                     <h3>{{recipe.recipe_name}}</h3>
@@ -25,7 +27,7 @@
                                    <div class="container">
                                       <div class="col-12">
                                           
-                                          
+    <!-- Users can get the edit/delete options for their own posted recipes.Otherwise users can only read the recipe and Like/Dislike-->                                      
                                           <ul class="list-inline recipe-options"> 
                                           
                                           {% if recipe.recipe_author == session['name'] %}

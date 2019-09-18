@@ -1,5 +1,7 @@
 {% extends 'base.html' %} {% block content %}
 
+<!-- Flash messages-->
+
 {% with messages = get_flashed_messages() %}
                                 {% if messages %}
                                         {% for message in messages %}
@@ -13,6 +15,8 @@
                                         {% endfor %}
                                 {% endif %}
                             {% endwith %}
+<!-- Registration form-->
+<!-- If the email id provided by user has been used before,user will get a error message-->
 
 <section class="section section-login light-grayish-cyan">
         <div class="container">
@@ -26,7 +30,7 @@
                             <div class="input-field">
                                 <i class="slightly-desaturated-cyan-2 material-icons prefix">face</i>
                                 <input type="text" id="name" name="name" required>
-                                <label class="dark-grey" for="email">Full Name</label>
+                                <label class="dark-grey" for="email">Name</label>
                             </div>
 
                             <div class="input-field">

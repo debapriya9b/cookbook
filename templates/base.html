@@ -31,7 +31,7 @@
       <a href="{{ url_for('home') }}" id="brand-logo" class="logo-cookbook">Cook<span>Book</span></a>
       <ul class="right login-logout-link">
         <!--If user is logged in,then Logout Link will show,otherwise Login Link-->
-        {% if session['email'] != None %}
+        {% if session['name'] %}
 
         <li>Hello {{ session['name'] }}! </li>
         <li><a href="{{ url_for('logout') }}">Logout</a></li>

@@ -4,8 +4,6 @@ import math
 from flask import Flask, render_template, redirect, request, url_for, session, flash
 from flask_pymongo import PyMongo, pymongo
 from bson.objectid import ObjectId
-from datetime import timedelta
-from flask_login import LoginManager, login_required, login_user, logout_user
 
 # Declaring app name
 app = Flask(__name__)
@@ -16,19 +14,6 @@ app.config["SECRET_KEY"] = '7473f88e01ba1bf3f40ce59c38d644ff'
 app.config["MONGO_DBNAME"] = 'cookbook'
 app.config["MONGO_URI"] = 'mongodb+srv://debapriya9b:Chotolok10@myfirstcluster-bsyfh.mongodb.net/cookbook?retryWrites=true&w=majority'
 
-# Define Flask-login configuration 
-
-login_mgr = LoginManager(app)
-login_mgr.login_view = 'login'
-login_mgr.refresh_view = 'relogin'
-login_mgr.needs_refresh_message = (u"Session timedout, please re-login")
-login_mgr.needs_refresh_message_category = "info"
-
-
-@app.before_request
-def before_request():
-    session.permanent = True
-    app.permanent_session_lifetime = timedelta(minutes=1)
 
 mongo = PyMongo(app)
 

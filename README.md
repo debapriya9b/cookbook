@@ -143,6 +143,47 @@ For several recipes, I've edited minor things like the recipe description, addin
 
 ## Deployment
 
+#### Deployment to Heroku
+
+In order the deploy my project to Heroku I have completed the following steps:
+
+- Created a `Procfile` with the command `echo web: python run.py > Procfile`.
+- Created a requirement.txt file so Heroku know what python modules it will need to run my application with the command `pip freeze > requirements.txt`
+- Created a new branch to test deployment to heroku changing  MONGO_URI  from local to mongo atlas, changed app.run() to set debug to false.
+- Created a new project on heroku and in the deploy section linked my github repositiory with heroku in order to deploy straight from the source.
+- Configured any enviornment variables in Heroku App Settings > Config Vars such as my Secret Key, IP PORT and MONGO_URI.
+- Finalised all code, and made sure that it was production ready and ensured that my `.gitignore` was not uploading any `__pycache__`, `.env` files  or `venv` folders.
+- Made a final commit / push to github.
+- Deployed the application from heroku admin page using linked repository and master branch.
+- The application was now fully deployed
+
+
+#### Setting the project up in a local development environment
+
+Should you wish the run a local copy of this application of your local machine, you will need to follow the instructions listed below:
+
+**Tools you may need:**   
+
+Python 3 installed on your machine https://www.python.org/downloads/  
+PIP installed on your machine https://pip.pypa.io/en/stable/installing/  
+Git installed on your machine: https://gist.github.com/derhuerst/1b15ff4652a867391f03  
+A text editor such as https://code.visualstudio.com/ Visual Studio Code  
+An account at  https://www.mongodb.com/cloud/atlas MongoDB Atlas or MongoDB running locally on your machine
+
+**Instructions**
+
+- Obtain a copy of the github repository located at https://github.com/debapriya9b/cookbook by clicking the download zip button and extracting the zip file to a chosen folder. If you have git installed on your system you can clone the repository with the command `git clone https://github.com/debapriya9b/cookbook.git`.
+- If possible open a termial session in the unzip folder or `cd` to the correct location
+- Next you need to install a virtual environment for the python interpreter, I recommend using pythons built in virtual environment. Enter the command `python -m venv venv` . NOTE: Your python command may differ, such as `python3` or `py`.
+- Activate the venv with the command `source venv/bin/activate`, again this may differ depending on your operating system, please check https://docs.python.org/3/library/venv.html for further instructions.
+- If needed, Upgrade pip locally by `pip install --upgrade pip`.
+- Install all required modules withh the command `pip -r requirements.txt`.
+- Its now time to open your text editor and create a file called `.flaskenv`.
+- Inside this file you will need to create a SECRET_KEY variable and a MONGO_URI  to link to your own database. Please make sure to call your database 'cookbook', with 4 collections called recipes, users, categories and difficulties. You will find the source for these collections in `/app/data`.
+- Lastly, open run.py and on replace line 10 to ` app.run(host=os.getenv('IP'), port=os.getenv('PORT'), debug=True)` and save the file
+- You can now run the application with the command `python run.py`
+- You can visit the website at `http://127.0.0.1:5000`
+
 ---
 
 ## Credits

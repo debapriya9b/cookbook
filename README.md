@@ -137,7 +137,7 @@ For several recipes, I've edited minor things like the recipe description, addin
 
 ---
 
-### Validators
+## Validators
 
 ---
 

@@ -216,6 +216,28 @@ An account at  https://www.mongodb.com/cloud/atlas MongoDB Atlas or MongoDB runn
 
 ## Credits
 
+#### Content/Images
 
+- Wikipedia (https://en.wikibooks.org/wiki/Cookbook:Table_of_Contents):For recipes
+- Recipe images:google.com
+- Cooking Quotations:google.com
+
+#### Code Reference
+
+- https://www.tutorialspoint.com
+- https://www.w3schools.com/
+- https://stackoverflow.com/
+- https://codepen.io/
+
+### Acknowledgements
+
+- A big Thank You to all the tutors from Code Institute
+- A big Thank You to my mentor Seun Owonikoko
+
+
+
+#### Disclaimer
+
+The content of this Website is for educational purposes only.
 
 

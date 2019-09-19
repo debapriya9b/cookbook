@@ -129,11 +129,17 @@ I have asked multiple friends to test the website on their devices and recieved 
 
 I've created my own personal account. In addition, I've tested with about 10 fake accounts in order to confirm authentication and validation worked as expected.
 
-**Add | Edit | Delete a Recipe**
+**Add | Edit | Delete | Read a Recipe**
 
-In addition to my personal recipes, I've created about 10 test recipes, mostly *Abcd*, *Efgh* in order to check the add recipe functionality,flash message functionality etc. These recipes were created using my actual account, and several test accounts.
+In addition to my final recipes, I've created about 10 test recipes, mostly *Abcd*, *Efgh* in order to check the add recipe functionality,flash message functionality etc. These recipes were created using my actual account, and several test accounts.All these recipes can be viewed without logging in.
+
+Edit,Delete button:If the user login,then only for their own recipes edit and delete button will be visible.Tested.
 
 For several recipes, I've edited minor things like the recipe description, adding additional ingredients or directions, to test the functionality of updating a recipe to the database.Even deleted fake recipes to check the delete functionality.
+
+Tested all filtered links fromnavnar,dropdowns in the form,functionality fro the floating button.
+
+In the navbar,when the user is logged in,its showing the user's name with a welcoming note and the logged out link.Whenever user session is no more valid,its automatically showing login link instead of logout,and the use name is not visible any more:Teated this feature also.
 
 ---
 

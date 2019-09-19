@@ -109,8 +109,9 @@ I've used Microsoft Word to create my wireframe / mock-up.
 ## Testing
 
 Testing was performed in 2 different ways.  
-1. Manual Browser Testing during develoment  
+1. Browser Testing
 2. User testing
+3. Manual Testing 
 
 #### Browser Testing
 
@@ -123,7 +124,7 @@ After I had test deployed the site to heroku I was able to see the real life ver
 
 I have asked multiple friends to test the website on their devices and recieved very little feedback on errors indicating that there was not many issues to be found. I am satisfied with the outcome.
 
-####  Manual Teating
+####  Manual Testing
 
 **Creating an Account**
 
@@ -133,11 +134,13 @@ I've created my own personal account. In addition, I've tested with about 10 fak
 
 In addition to my final recipes, I've created about 10 test recipes, mostly *Abcd*, *Efgh* in order to check the add recipe functionality,flash message functionality etc. These recipes were created using my actual account, and several test accounts.All these recipes can be viewed without logging in.
 
-Edit,Delete button:If the user login,then only for their own recipes edit and delete button will be visible.Tested.
+**Edit,Delete button**:If the user login,then only for their own recipes edit and delete button will be visible.Tested.
 
 For several recipes, I've edited minor things like the recipe description, adding additional ingredients or directions, to test the functionality of updating a recipe to the database.Even deleted fake recipes to check the delete functionality.
 
-Tested all filtered links fromnavnar,dropdowns in the form,functionality fro the floating button.
+Tested all **filtered links from navbar,dropdowns** in the form,functionality of the **floating button**.Tooltips are working fine for all buttons.
+
+**Login-Logout link in Navigation bar**
 
 In the navbar,when the user is logged in,its showing the user's name with a welcoming note and the logged out link.Whenever user session is no more valid,its automatically showing login link instead of logout,and the use name is not visible any more:Teated this feature also.
 

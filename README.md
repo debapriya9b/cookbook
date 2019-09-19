@@ -218,16 +218,17 @@ An account at  https://www.mongodb.com/cloud/atlas MongoDB Atlas or MongoDB runn
 
 #### Content/Images
 
-- Wikipedia (https://en.wikibooks.org/wiki/Cookbook:Table_of_Contents):For recipes
+- Wikipedia (https://en.wikibooks.org/wiki/Cookbook:Table_of_Contents) : For recipes
 - Recipe images:google.com
 - Cooking Quotations:google.com
 
 #### Code Reference
 
 - https://www.tutorialspoint.com
-- https://www.w3schools.com/
-- https://stackoverflow.com/
-- https://codepen.io/
+- https://www.w3schools.com
+- https://stackoverflow.com
+- https://www.javatpoint.com
+- https://www.quackit.com/mongodb/tutorial
 
 ### Acknowledgements
 

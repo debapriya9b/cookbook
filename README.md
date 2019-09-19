@@ -148,6 +148,25 @@ In the navbar,when the user is logged in,its showing the user's name with a welc
 
 ## Validators
 
+**HTML**
+- [W3C HTML Validator](https://validator.w3.org) - Unfortunately the W3C Validator for HTML does not understand the Jinja templating syntax, so it therefore shows a lot of errors with regards to `{{ variables }}`, `{% for %} {% endfor %}`, etc. Aside from the Jinja warnings and errors, all of the remaining code is perfectly validating. Also due to the Jinja templating, certain elements cannot be 'beautified' across multiple lines, and must remain on a single line. An example of this is the `<select>` element, which is rather long with specific Materialize classes, and Jinja templating.
+
+**CSS**
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - No error found
+ 
+**JavaScript**
+- [JShint](https://jshint.com/)
+    - There are 8 functions in this file.
+      Function with the largest signature take 0 arguments, while the median is 0.
+      Largest function has 3 statements in it, while the median is 2.
+      The most complex function has a cyclomatic complexity value of 2 while the median is 1.
+
+ - `$` (21 times - this is for jQuery)
+ - `M` (1 time - this is for Materialize)
+
+**Python**
+- [PEP8 Online](http://pep8online.com/)- Validated
+
 ---
 
 ## Deployment

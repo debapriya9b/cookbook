@@ -155,8 +155,8 @@ def delete_recipe(id):
 #User to like a recipe
 @app.route('/like/recipe_id?=<id>')
 def like(id):
-    '''Controls behavior of user-like increment and decrements operator.
-    Feature is dependant upon user interaction in the user-interface.'''
+    #Controls behavior of user-like increment and decrements operator.
+    #Feature is dependant upon user interaction in the user-interface.
 
     mongo.db.recipes.find_one_and_update({"_id": ObjectId(id)}, {"$inc": {"likes": 1}})
     return redirect(url_for('get_recipes'))
@@ -164,8 +164,8 @@ def like(id):
 #User to dislike a recipe
 @app.route('/dislike/recipe_id?=<id>')
 def dislike(id):
-    '''Controls behavior of user-dislike increment and decrements operator.
-    Feature is dependant upon user interaction in the user-interface.'''
+    #Controls behavior of user-dislike increment and decrements operator.
+    #Feature is dependant upon user interaction in the user-interface.
     
     mongo.db.recipes.find_one_and_update({"_id": ObjectId(id)}, {"$inc": {"dislikes": 1}})
     return redirect(url_for('get_recipes'))
@@ -174,14 +174,14 @@ def dislike(id):
 
 @app.route('/register', methods=['POST', 'GET'])
 def register():
-    '''Accepts POST and GET requests.
-    If the request is a GET request, checks for a session email.
-    If session email is found, the homepage is rendered.
-    If no session email is found, the register template is rendered.
-    If the request is a POST request, form data is retrieved.
-    A check is performed to verify that the user email doesn't already exist.
-    If the user already exists, the register page is rendered with a user_exists error.
-    If a user does not exist, the user is added to the database and the login page is rendered.'''
+    #Accepts POST and GET requests.
+    #If the request is a GET request, checks for a session email.
+    #If session email is found, the homepage is rendered.
+    #If no session email is found, the register template is rendered.
+    #If the request is a POST request, form data is retrieved.
+    #A check is performed to verify that the user email doesn't already exist.
+    #If the user already exists, the register page is rendered with a user_exists error.
+    #If a user does not exist, the user is added to the database and the login page is rendered.
 
     # check for logged in user
     email = session.get('email')

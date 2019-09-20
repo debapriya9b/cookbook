@@ -93,7 +93,7 @@ I've used Microsoft Word to create my wireframe / mock-up.
     
 - **Add a Recipe** ([**C**RUD] Create or 'add' a new recipe)
 
-      - Logged in users can add recipes.User name will automatically populate in the add recipe form as Recipe Author.For selective fields,user can select the options from drop down.All the fields of the form is well explained with the 'placeholder' to make it userfriendly.
+    - Logged in users can add recipes.User name will automatically populate in the add recipe form as Recipe Author.For selective fields,user can select the options from drop down.All the fields of the form is well explained with the 'placeholder' to make it userfriendly.
 
 - **Viewing Recipes** ([C**R**UD] Read or 'review' recipes)
 

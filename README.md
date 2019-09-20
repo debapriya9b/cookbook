@@ -79,29 +79,48 @@ I've used Microsoft Word to create my wireframe / mock-up.
    -**MainNav:** User will get either Login or Logout option based on their 'Logged in' status.
    -**Froating Navigation button:** User can access any funcionality be it Login/Logout,Checking recipes,Adding recipes,Referring to helper from anywhere of the website.No need to scroll up till the main menu bar.Tooltips option has been used for each button to make it more user friendly.
  
-- **Register Account**
+- **Register User**
 
     - Anybody can register for free. I have built-in authentication and authorization to check certain criteria is met before an account is validated. All passwords are hashed for security purposes!
     
-- **Log In to Account**
+- **Log In to User**
 
     - For existing users, I have more authentication and authorization incorporated to check that the hashed passwords and username match the database.Logged in Users will get a Welcome message in the Navigation bar.
 
-- **Log Out of Account**
+- **Log Out of User**
 
     - Users can easily log out of their account with the click of a button.
     
+- **Add a Recipe** ([**C**RUD] Create or 'add' a new recipe)
+
+      - Logged in users can add recipes.User name will automatically populate in the add recipe form as Recipe Author.For selective fields,user can select the options from drop down.All the fields of the form is well explained with the 'placeholder' to make it userfriendly.
+
 - **Viewing Recipes** ([C**R**UD] Read or 'review' recipes)
 
     - On the *recipes* page, all recipes are displayed.If user wants to see a particular recipe,the recipe will open in a full screen where all the details of the recipe can be found.Users can show their opinions by liking or disliking the recipes.
     - If user wants to **search** recipes for a particular Meal Category,it can be easily accessable from the sidenav bar.
     
+- **Update a Recipe** ([CR**U**D] Update recipes)
 
+    -Users can update or 'edit' their own recipes on this page.Edit option will only -be visible for a user on their own recipe pages.
+
+- **Delete a Recipe** ([CRU**D**] Delete recipes)
+
+    -Users can delete or 'remove' their own recipes. Delete option will only be visible for a user on their own recipe pages.
  
+- **Flash Messages**
 
+    -Flash messages have been used for different activities to direct/inform the users and to make the site more user friendly.
 
 ### Features Left to Implement
 
+In an ideal world, there are a couple items that I would've loved to have completed as well, but just didn't have the time or knowledge just yet as to how to implement these features.
+
+- Make individual user accout,where user can monitor all his/her activities.
+- One user can like a particular recipe only once.
+- An admin account which can control all activities.
+- Search Button,more filters to make recipes more easily accessable.
+- Since I have only few recipes, I have not used pagination.But when my database will start to expand with several more recipes I need to use pagination to make it more accessable.
 
 ---
 

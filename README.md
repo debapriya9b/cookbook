@@ -169,6 +169,11 @@ Making use of browser resizing and dev tools device toolbars on each browser to 
 
 After I had test deployed the site to heroku I was able to see the real life versions which I was able to test on android phone, amazon fire tablet and different orientations. Unfortunitely, I have no safari devices which I am able test on.
 
+**Known Issue** 
+- When the userername is lengthy ,after the user logged in, in most of the small devices Logout link,and the welcome message is not visible in the main navbar.To solve this media query has been added.Still,in few cases,where username is too lengthy,this problem persists.To solve this issue,logout option has been added in sidenavbar as well as floating menu button so that user can easily get the logout link.
+- Tooltips have been added for each floating links however in mobile view it is not showing.
+ 
+
 ####  User testing
 
 I have asked multiple friends to test the website on their devices and recieved very little feedback on errors indicating that there was not many issues to be found. I am satisfied with the outcome.

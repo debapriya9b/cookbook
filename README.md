@@ -24,7 +24,7 @@ I tried to keep the website very simple and user friendly.Hope you enjoy viewing
 
 ## UX
 
-I have decided to build a Cookbook, since I personally love food and always try out new recipes from different public sites like Cooking blogs, youtube etc. This was the perfect opportunity to finally have a single application to contain all of my favourite recipes in one source. A lot of people often ask me for specific recipes, so now I can quickly provide a single source for all of my tried and tasted recipes. It also allows others to store their own recipes securely.
+I have decided to build a Cookbook, since I personally love food and always try out new recipes from different public sites like Cooking blogs, youtube etc. This was the perfect opportunity to finally have a single application to contain all of my favourite recipes in one source. A lot of people often ask me for specific recipes, so now I can quickly provide a single source for all of my tried and tested(as well as tasted) recipes. It also allows others to store their own recipes securely.
 
 ### User Stories
 
@@ -33,7 +33,7 @@ I have decided to build a Cookbook, since I personally love food and always try 
 - "Is it possible to view all the recipes without registering or logging in?"
 - "What if I post my recipe and later want to change it or delete it?"
 - "I am not that computer savy,so cannot use a very complicated website."
-- "I love cooking but those measurements are always confusing for me.If I get a quick reference where I can see the standard cooking conversion table it will be great"
+- "I love cooking but those measurements are always confusing for me.If I get a quick reference where I can see the standard cooking conversion tables it will be great"
 
 ---
 
@@ -72,6 +72,9 @@ I've used Microsoft Word to create my wireframe / mock-up.
 ## Features
 
 ### Existing Features
+
+- Navigation bar
+
 
 ### Features Left to Implement
 

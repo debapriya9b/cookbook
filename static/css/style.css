@@ -281,3 +281,13 @@ hr{
   border-radius: 8px;
   margin-top: 10px;
 }
+
+/*Media Query*/
+
+@media only screen and (max-width: 500px) {
+  #brand-logo{
+    text-align: left;
+    text-decoration: none;
+    font-size: 20px;
+}
+

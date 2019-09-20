@@ -155,9 +155,9 @@ In an ideal world, there are a couple items that I would've loved to have comple
 ## Testing
 
 Testing was performed in 2 different ways.  
-1. Browser Testing
-2. User testing
-3. Manual Testing 
+- Browser Testing
+- User testing
+- Manual Testing 
 
 #### Browser Testing
 
@@ -257,6 +257,48 @@ An account at  https://www.mongodb.com/cloud/atlas MongoDB Atlas or MongoDB runn
 - Lastly, open run.py and on replace line 10 to ` app.run(host=os.getenv('IP'), port=os.getenv('PORT'), debug=True)` and save the file
 - You can now run the application with the command `python run.py`
 - You can visit the website at `http://127.0.0.1:5000`
+
+---
+
+## Database structure
+
+Sign up for a free account on [MongoDB](https://www.mongodb.com) and create a new Database called **Cookbook**. The *Collections* in that database are:
+
+**categories**
+```
+_id: <ObjectId>
+category_name: <array>
+```
+
+**difficulties**
+```
+_id: <ObjectId>
+difficulty_name: <array>
+```
+
+**users**
+```
+_id: <ObjectId>
+name: <string>
+email: <string>
+password: <string>
+```
+
+**recipes**
+```
+_id: <ObjectId>
+recipe_name: <string>
+recipe_description: <string>
+recipe_ingredients: <array>
+recipe_procedure: <array>
+recipe_category: <string>
+recipe_time: <string>
+recipe_difficulty_level: <string>
+recipe_author: <string>
+recipe_image: <string>
+likes: <int32>
+dislikes: <int32>
+```
 
 ---
 

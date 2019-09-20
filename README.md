@@ -75,9 +75,9 @@ I've used Microsoft Word to create my wireframe / mock-up.
 
 - **Navigation bar**
 
-   -**SideNav:** User can search filtered Meal Categories options like Checking All recipes,Add Recipe,Helper,Logout can be accessed from Sidenav bar.
-   -**MainNav:** User will get either Login or Logout option based on their 'Logged in' status.
-   -**Froating Navigation button:** User can access any funcionality be it Login/Logout,Checking recipes,Adding recipes,Referring to helper from anywhere of the website.No need to scroll up till the main menu bar.Tooltips option has been used for each button to make it more user friendly.
+    - **SideNav:** User can search filtered Meal Categories options like Checking All recipes,Add Recipe,Helper,Logout can be accessed from Sidenav bar.
+    - **MainNav:** User will get either Login or Logout option based on their 'Logged in' status.
+    - **Froating Navigation button:** User can access any funcionality be it Login/Logout,Checking recipes,Adding recipes,Referring to helper from anywhere of the website.No need to scroll up till the main menu bar.Tooltips option has been used for each button to make it more user friendly.
  
 - **Register User**
 
@@ -102,15 +102,15 @@ I've used Microsoft Word to create my wireframe / mock-up.
     
 - **Update a Recipe** ([CR**U**D] Update recipes)
 
-    -Users can update or 'edit' their own recipes on this page.Edit option will only -be visible for a user on their own recipe pages.
+    - Users can update or 'edit' their own recipes on this page.Edit option will only -be visible for a user on their own recipe pages.
 
 - **Delete a Recipe** ([CRU**D**] Delete recipes)
 
-    -Users can delete or 'remove' their own recipes. Delete option will only be visible for a user on their own recipe pages.
+    - Users can delete or 'remove' their own recipes. Delete option will only be visible for a user on their own recipe pages.
  
 - **Flash Messages**
 
-    -Flash messages have been used for different activities to direct/inform the users and to make the site more user friendly.
+    - Flash messages have been used for different activities to direct/inform the users and to make the site more user friendly.
 
 ### Features Left to Implement
 

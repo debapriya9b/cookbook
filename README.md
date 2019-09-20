@@ -68,7 +68,7 @@ The concept for Cookbook is to make cooking fun and easy, so to keep the overall
 I've used Microsoft Word to create my wireframe / mock-up.
 All my wireframes can be found in the following link
 
-[here] (https://github.com/debapriya9b/cookbook/tree/master/wireframes)
+[here](https://github.com/debapriya9b/cookbook/tree/master/wireframes)
 
 ---
 

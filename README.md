@@ -74,6 +74,7 @@ I've used Microsoft Word to create my wireframe / mock-up.
 ### Existing Features
 
 - **Navigation bar**
+
    -**SideNav:** User can search filtered Meal Categories
          Options like Checking All recipes,Add Recipe,Helper,Logout can be accessed from Sidenav bar.
    -**MainNav:** User will get either Login or Logout option based on their 'Logged in' status.

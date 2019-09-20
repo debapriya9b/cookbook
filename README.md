@@ -75,10 +75,29 @@ I've used Microsoft Word to create my wireframe / mock-up.
 
 - **Navigation bar**
 
-   -**SideNav:** User can search filtered Meal Categories
-         Options like Checking All recipes,Add Recipe,Helper,Logout can be accessed from Sidenav bar.
+   -**SideNav:** User can search filtered Meal Categories options like Checking All recipes,Add Recipe,Helper,Logout can be accessed from Sidenav bar.
    -**MainNav:** User will get either Login or Logout option based on their 'Logged in' status.
-   -**Froating Navigation button:** User can access any funcionality be it Login/Logout,Checking recipes,Adding recipes,Referring to helper from anywhere of the website.No need to scroll up till the main menu bar.
+   -**Froating Navigation button:** User can access any funcionality be it Login/Logout,Checking recipes,Adding recipes,Referring to helper from anywhere of the website.No need to scroll up till the main menu bar.Tooltips option has been used for each button to make it more user friendly.
+ 
+- **Register Account**
+
+    - Anybody can register for free. I have built-in authentication and authorization to check certain criteria is met before an account is validated. All passwords are hashed for security purposes!
+    
+- **Log In to Account**
+
+    - For existing users, I have more authentication and authorization incorporated to check that the hashed passwords and username match the database.Logged in Users will get a Welcome message in the Navigation bar.
+
+- **Log Out of Account**
+
+    - Users can easily log out of their account with the click of a button.
+    
+- **Viewing Recipes** ([C**R**UD] Read or 'review' recipes)
+
+    - On the *recipes* page, all recipes are displayed.If user wants to see a particular recipe,the recipe will open in a full screen where all the details of the recipe can be found.Users can show their opinions by liking or disliking the recipes.
+    - If user wants to **search** recipes for a particular Meal Category,it can be easily accessable from the sidenav bar.
+    
+
+ 
 
 
 ### Features Left to Implement

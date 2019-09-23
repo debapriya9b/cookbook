@@ -165,7 +165,7 @@ Testing was performed in 2 different ways.
 #### Browser Testing
 
 While my main choice of browser for development is google chrome, I regularly checked the performance on firefox and opera browsers. 
-Making use of browser resizing and dev tools device toolbars on each browser to test responsiveness and how how the grid, fonts and media queries were performing and the consistency between each. Adjusting to find a happy medium for all three. 
+Making use of browser resizing and dev tools device toolbars on each browser to test responsiveness and how the grid, fonts and media queries were performing and the consistency between each. Adjusting to find a happy medium for all three. 
 
 After I had test deployed the site to heroku I was able to see the real life versions which I was able to test on android phone, amazon fire tablet and different orientations. Unfortunitely, I have no safari devices which I am able test on.
 
@@ -219,7 +219,7 @@ In the navbar,when the user is logged in,its showing the user's name with a welc
  - `M` (1 time - this is for Materialize)
 
 **Python**
-- [PEP8 Online](http://pep8online.com/)- Validated
+- [PEP8 Online](http://pep8online.com/)- Validated and corrected accordingly
 
 ---
 

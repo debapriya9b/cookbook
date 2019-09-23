@@ -58,6 +58,8 @@
         </li>
         <li class="red lighten-2">
           <ul class="collapsible collapsible-accordion">
+            <li class="red lighten-2 black-text "><a href="{{ url_for('home') }}" class="waves-effect waves-blue"><i class="material-icons black-text">home</i>Home</a></li>
+            <li class="red lighten-2 black-text "><a href="{{ url_for('get_recipes') }}" class="waves-effect waves-blue"><i class="material-icons black-text">restaurant_menu</i>All Recipes</a></li>
             <li>
               <a class="collapsible-header red lighten-2 black-text sidebar-menu-style "><i class="material-icons black-text">list</i>Recipe by Categories<i class="material-icons right black-text" style="margin-right:0;">arrow_drop_down</i></a>
               <div class="collapsible-body">
@@ -73,12 +75,10 @@
           </ul>
         </li>
 
-        <li class="red lighten-2 black-text "><a href="{{ url_for('get_recipes') }}" class="waves-effect waves-blue"><i class="material-icons black-text">restaurant_menu</i>All Recipes</a></li>
+
         <li class="red lighten-2 black-text"><a href="{{ url_for('add_recipe') }}" class="waves-effect waves-blue"><i class="material-icons black-text">add</i>Add Recipe</a></li>
         <li class="red lighten-2 black-text"><a href="{{ url_for('get_helper') }}" class="waves-effect waves-blue"><i class="material-icons black-text">help</i>Helper</a></li>
-        </li>
-        <li class="red lighten-2 black-text"><a href="{{ url_for('logout') }}" class="waves-effect waves-blue"><i class="material-icons black-text">person</i>Logout</a></li>
-        </li>
+
       </ul>
 
     </div>

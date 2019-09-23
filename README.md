@@ -203,7 +203,7 @@ In the navbar,when the user is logged in,its showing the user's name with a welc
 ## Validators
 
 **HTML**
-- [W3C HTML Validator](https://validator.w3.org) - Unfortunately the W3C Validator for HTML does not understand the Jinja templating syntax, so it therefore shows a lot of errors with regards to `{{ variables }}`, `{% for %} {% endfor %}`, etc. Aside from the Jinja warnings and errors, all of the remaining code is perfectly validating. Also due to the Jinja templating, certain elements cannot be 'beautified' across multiple lines, and must remain on a single line. An example of this is the `<select>` element, which is rather long with specific Materialize classes, and Jinja templating.
+- [W3C HTML Validator](https://validator.w3.org) - Unfortunately the W3C Validator for HTML does not understand the Jinja templating syntax, so it therefore shows a lot of errors with regards to `{{ variables }}`, `{% for %} {% endfor %}`, etc. Aside from the Jinja warnings and errors, all of the remaining code is perfectly validating. Also due to the Jinja templating, certain elements cannot be 'beautified' across multiple lines, and must remain on a single line. An example of this is the `<select>` element, which is rather long with specific Materialize classes and Jinja templating.
 
 **CSS**
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - No error found
@@ -227,7 +227,7 @@ In the navbar,when the user is logged in,its showing the user's name with a welc
 
 #### Deployment to Heroku
 
-In order the deploy my project to Heroku I have completed the following steps:
+In order to deploy my project to Heroku I have completed the following steps:
 
 - Created a `Procfile` with the command `echo web: python run.py > Procfile`.
 - Created a requirement.txt file so Heroku know what python modules it will need to run my application with the command `pip freeze > requirements.txt`
@@ -259,10 +259,10 @@ An account at  https://www.mongodb.com/cloud/atlas MongoDB Atlas or MongoDB runn
 - Next you need to install a virtual environment for the python interpreter, I recommend using pythons built in virtual environment. Enter the command `python -m venv venv` . NOTE: Your python command may differ, such as `python3` or `py`.
 - Activate the venv with the command `source venv/bin/activate`, again this may differ depending on your operating system, please check https://docs.python.org/3/library/venv.html for further instructions.
 - If needed, Upgrade pip locally by `pip install --upgrade pip`.
-- Install all required modules withh the command `pip -r requirements.txt`.
+- Install all required modules with the command `pip -r requirements.txt`.
 - Its now time to open your text editor and create a file called `.flaskenv`.
-- Inside this file you will need to create a SECRET_KEY variable and a MONGO_URI  to link to your own database. Please make sure to call your database 'cookbook', with 4 collections called recipes, users, categories and difficulties. You will find the source for these collections in `/app/data`.
-- Lastly, open run.py and on replace line 10 to ` app.run(host=os.getenv('IP'), port=os.getenv('PORT'), debug=True)` and save the file
+- Inside this file you will need to create a SECRET_KEY variable and a MONGO_URI  to link to your own database. Please make sure to call your database 'cookbook', with 4 collections called recipes, users, categories and difficulties. 
+- Lastly, open run.py and on replace app.run to ` app.run(host=os.getenv('IP'), port=os.getenv('PORT'), debug=True)` and save the file
 - You can now run the application with the command `python run.py`
 - You can visit the website at `http://127.0.0.1:5000`
 

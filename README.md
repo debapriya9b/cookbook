@@ -78,7 +78,7 @@ All my wireframes can be found in the following link
 
 - **Navigation bar**
 
-    - **SideNav:** User can search filtered Meal Categories,other options like checking All recipes,Add Recipe,Helper,Logout can be accessed from Sidenav bar.
+    - **SideNav:** User can search filtered Meal Categories,other options like checking All recipes,Add Recipe,Helper can be accessed from Sidenav bar.
     - **MainNav:** User will get either Login or Logout option based on their 'Logged in' status.It has also CookBook Logo which is connected to home page.
     - **Floating Navigation button:** User can access any funcionality be it Login/Logout,Checking recipes,Adding recipes,Referring to helper from anywhere of the website.No need to scroll up till the main menu bar.Tooltips option has been used for each button to make it more user friendly.
  
@@ -96,7 +96,7 @@ All my wireframes can be found in the following link
     
 - **Add a Recipe** ([**C**RUD] Create or 'add' a new recipe)
 
-    - Logged in users can add recipes.User name will automatically populate in the add recipe form as Recipe Author.For selective fields,user can select the options from drop down.All the fields of the form is well explained with the 'placeholder' to make it userfriendly.
+    - Logged in users can add recipes.User name will automatically populate in the add recipe form as Recipe Author.For selective fields,user can select the options from drop down.All the fields of the form is well explained with the 'placeholder' to make it user friendly.
 
 - **Viewing Recipes** ([C**R**UD] Read or 'review' recipes)
 
@@ -105,7 +105,7 @@ All my wireframes can be found in the following link
     
 - **Update a Recipe** ([CR**U**D] Update recipes)
 
-    - Users can update or 'edit' their own recipes on this page.Edit option will only -be visible for a user on their own recipe pages.
+    - Users can update or 'edit' their own recipes on Edit page.Edit option will only be visible for a user on their own recipe pages.
 
 - **Delete a Recipe** ([CRU**D**] Delete recipes)
 
@@ -117,7 +117,7 @@ All my wireframes can be found in the following link
 
 ### Features Left to Implement
 
-In an ideal world, there are a couple items that I would've loved to have completed as well, but just didn't have the time or knowledge just yet as to how to implement these features.
+In an ideal world, there are a couple of items that I would've loved to have completed as well, but didn't have the time or knowledge just yet as to how to implement these features.
 
 - Make individual user accout,where user can monitor all his/her activities.
 - One user can like a particular recipe only once.
@@ -145,7 +145,7 @@ In an ideal world, there are a couple items that I would've loved to have comple
 - **Flask**
     - [Flask 1.0.2](http://flask.pocoo.org/) - Used as a microframework.
     - [Jinja 2.10](http://jinja.pocoo.org/docs/2.10/) - Used for templating with Flask.
-    - [Werkzeug 0.14](https://werkzeug.palletsprojects.com/en/0.14.x/) - Used for password hashing, authentication, and authorization.
+    - [Werkzeug 0.14](https://werkzeug.palletsprojects.com/en/0.14.x/) - Used for password hashing, authentication and authorization.
 - **Heroku**
     - [Heroku](https://www.heroku.com) - Used for app hosting.
 - **Python**    
@@ -157,7 +157,7 @@ In an ideal world, there are a couple items that I would've loved to have comple
 
 ## Testing
 
-Testing was performed in 2 different ways.  
+Testing was performed in 3 different ways.  
 - Browser Testing
 - User testing
 - Manual Testing 
@@ -170,7 +170,7 @@ Making use of browser resizing and dev tools device toolbars on each browser to 
 After I had test deployed the site to heroku I was able to see the real life versions which I was able to test on android phone, amazon fire tablet and different orientations. Unfortunitely, I have no safari devices which I am able test on.
 
 **Known Issue** 
-- When the username is lengthy ,after the user logged in, in most of the small devices Logout link,and the welcome message is not visible in the main navbar.To solve this media query has been added.Still,in few cases,where username is too lengthy,this problem persists.To solve this issue,logout option has been added in sidenavbar as well as floating menu button so that user can easily get the logout link.
+- When the username is lengthy ,after the user logged in, in most of the small devices Logout link,and the welcome message is not visible in the main navbar.To solve this media query has been added.Still,in few cases,where username is too lengthy,this problem persists.To solve this issue,logout option has been added in the floating menu button so that user can easily get the logout link.
 - Tooltips have been added for each floating links however in mobile view it is not showing.
  
 
@@ -186,7 +186,7 @@ I've created my own personal account. In addition, I've tested with about 10 fak
 
 **Add | Edit | Delete | Read a Recipe**
 
-In addition to my final recipes, I've created about 10 test recipes, mostly *Abcd*, *Efgh* in order to check the add recipe functionality,flash message functionality etc. These recipes were created using my actual account, and several test accounts.All these recipes can be viewed without logging in.
+In addition to my final recipes, I've created about 10 test recipes, in order to check the add recipe functionality,flash message functionality etc. These recipes were created using my actual account, and several test accounts.All these recipes can be viewed without logging in.
 
 **Edit,Delete button**:If the user login,then only for their own recipes edit and delete button will be visible.Tested.
 
@@ -196,7 +196,7 @@ Tested all **filtered links from navbar,dropdowns** in the form,functionality of
 
 **Login-Logout link in Navigation bar**
 
-In the navbar,when the user is logged in,its showing the user's name with a welcoming note and the logged out link.Whenever user session is no more valid,its automatically showing login link instead of logout,and the use name is not visible any more:Teated this feature also.
+In the navbar,when the user is logged in,its showing the user's name with a welcoming note and the logged out link.Whenever user session is no more valid,its automatically showing login link instead of logout and the user name is not visible any more:Teated this feature also.
 
 ---
 

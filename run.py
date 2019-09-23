@@ -112,7 +112,7 @@ def add_recipe():
     # check for logged in user
     email = session.get('email')
     if not email:
-        flash('You need to login to add your recipe!')
+        flash('Please login to add your recipe!')
         return redirect(url_for('login'))
     return render_template('addrecipe.html',
                            categories=mongo.db.categories.find(),
@@ -194,14 +194,13 @@ def delete_recipe(id):
     name = session.get('name')
     nameid = mongo.db.users.find({'username': name})
     if not name:
-        flash('You need to login to delete your own recipe!')
+        flash('Please login to delete your own recipe!')
         return redirect(url_for('login'))
     try:
         flash('Your recipe has been deleted!')
         mongo.db.recipes.delete_one({"_id": ObjectId(id), 
                                      'recipe_author': name})
     except:
-        flash('You can only delete your own recipe!')
         return redirect(url_for('get_recipes'))
     return redirect(url_for('get_recipes'))
     
@@ -286,7 +285,7 @@ def login():
         print(session.get('email'))
         user = mongo.db.users.find_one({"email": email})
         if user is None:
-            flash('You have to Register first!')
+            flash('Please Register first!')
             return redirect(url_for("register"))
         session['name'] = user['name']
         try:

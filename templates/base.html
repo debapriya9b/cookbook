@@ -33,7 +33,7 @@
         <!--If user is logged in,then Logout Link will show,otherwise Login Link-->
         {% if session['name'] %}
 
-        <li>Hello {{ session['name'] }}! </li>
+        <li>Hello {{ session['name'] }} </li>
         <li><a href="{{ url_for('logout') }}">Logout</a></li>
 
         {% else %}
@@ -96,7 +96,7 @@
       <li><a class="btn-floating yellow darken-1" data-toggle="tooltip" title="All Recipes" href="{{ url_for('get_recipes') }}"><i class="material-icons">restaurant_menu</i></a></li>
       <li><a class="btn-floating blue" data-toggle="tooltip" title="Login" href="{{ url_for('login') }}"><i class="material-icons">person_add</i></a></li>
       <li><a class="btn-floating green" data-toggle="tooltip" title="Add Recipe" href="{{ url_for('add_recipe') }}"><i class="material-icons">add</i></a></li>
-      <li><a class="btn-floating brown darken-3" data-toggle="tooltip" title="Help" href="{{ url_for('get_helper') }}"><i class="material-icons">help</i></a></li>
+      <li><a class="btn-floating brown darken-3" data-toggle="tooltip" title="Helper" href="{{ url_for('get_helper') }}"><i class="material-icons">help</i></a></li>
       <li><a class="btn-floating purple" data-toggle="tooltip" title="Logout" href="{{ url_for('logout') }}"><i class="material-icons">person</i></a></li>
     </ul>
   </div>

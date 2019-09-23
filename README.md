@@ -78,9 +78,9 @@ All my wireframes can be found in the following link
 
 - **Navigation bar**
 
-    - **SideNav:** User can search filtered Meal Categories options like Checking All recipes,Add Recipe,Helper,Logout can be accessed from Sidenav bar.
-    - **MainNav:** User will get either Login or Logout option based on their 'Logged in' status.
-    - **Froating Navigation button:** User can access any funcionality be it Login/Logout,Checking recipes,Adding recipes,Referring to helper from anywhere of the website.No need to scroll up till the main menu bar.Tooltips option has been used for each button to make it more user friendly.
+    - **SideNav:** User can search filtered Meal Categories,other options like checking All recipes,Add Recipe,Helper,Logout can be accessed from Sidenav bar.
+    - **MainNav:** User will get either Login or Logout option based on their 'Logged in' status.It has also CookBook Logo which is connected to home page.
+    - **Floating Navigation button:** User can access any funcionality be it Login/Logout,Checking recipes,Adding recipes,Referring to helper from anywhere of the website.No need to scroll up till the main menu bar.Tooltips option has been used for each button to make it more user friendly.
  
 - **Register User**
 

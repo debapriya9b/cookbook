@@ -1,90 +1,89 @@
-{% extends 'base.html' %} {% block content %} 
+{% extends 'base.html' %} {% block content %}
 
 <!-- View for a particular recipe details, when clicked on the same-->
 
 <div class="container-fluid">
-            <div class="col 12 recipe-view-header">
-                    <h3>{{recipe.recipe_name}}</h3>
-            </div>
+    <div class="col 12 recipe-view-header">
+        <h3>{{recipe.recipe_name}}</h3>
+    </div>
     <br>
-            <div class="row">
-                <div class="col-sm-12 col-md-4">
-                    <img class="img-fluid" src="{{recipe.recipe_image}}" width="100%" height="230px"></img>
-                        <p class="recipe-author-details">Author: <span>{{recipe.recipe_author}}</span></p>
+    <div class="row">
+        <div class="col-sm-12 col-md-4">
+            <img class="img-fluid" src="{{recipe.recipe_image}}" width="100%" height="230px"></img>
+            <p class="recipe-author-details">Author: <span>{{recipe.recipe_author}}</span></p>
+        </div>
+
+        <div class="col-sm-12 col-md-8">
+            <p class="recipe-description-details font-weight-light">{{recipe.recipe_description}}</p>
+            <br>
+            <div>
+                <ul class="list-group list-group-horizontal-md">
+                    <li class="list-group-item font-weight-bold shadow">Category: <span class="font-weight-light">{{recipe.recipe_category}}</span></li>
+                    <li class="list-group-item font-weight-bold shadow">Preparation Time: <span class="font-weight-light">{{recipe.recipe_time}}</span></li>
+                    <li class="list-group-item font-weight-bold shadow">Difficulty Level: <span class="font-weight-light">{{recipe.recipe_difficulty_level}}</span></li>
+                </ul>
+            </div>
+            <br>
+            <div class="container">
+                <div class="col-12">
+
+                    <!-- Users can get the edit/delete options for their own posted recipes.Otherwise users can only read the recipe and Like/Dislike-->
+                    <ul class="list-inline recipe-options">
+
+                        {% if recipe.recipe_author == session['name'] %}
+                        <li class="list-inline-item stats"><a href="{{ url_for('like', id=recipe._id) }}" data-toggle="tooltip" title="Like">{{ recipe.likes }} <i class="material-icons prefix small teal-text">thumb_up</i></a></li>
+                        <li class="list-inline-item stats"><a href="{{ url_for('dislike', id=recipe._id) }}" data-toggle="tooltip" title="Dislike">{{ recipe.dislikes }} <i class="material-icons prefix small teal-text">thumb_down</i></a></li>
+                        <li class="list-inline-item"><a href="{{ url_for('edit_recipe', id=recipe._id)}}" data-toggle="tooltip" title="Edit Recipe" href="#"><i class="material-icons prefix small teal-text">create</i></a></li>
+                        <li class="list-inline-item"><a data-toggle="tooltip" title="Delete Recipe" href="{{ url_for('delete_recipe', id=recipe._id)}}"><i class="material-icons prefix small teal-text">delete</i></a></li>
+                        {% else %}
+
+                        <li class="list-inline-item stats"><a href="{{ url_for('like', id=recipe._id) }}" data-toggle="tooltip" title="Like">{{ recipe.likes }} <i class="material-icons prefix small teal-text">thumb_up</i></a></li>
+                        <li class="list-inline-item stats"><a href="{{ url_for('dislike', id=recipe._id) }}" data-toggle="tooltip" title="Dislike">{{ recipe.dislikes }} <i class="material-icons prefix small teal-text">thumb_down</i></a></li>
+                        {% endif %}
+                    </ul>
                 </div>
-                
-                <div class="col-sm-12 col-md-8">
-                             <p class="recipe-description-details font-weight-light">{{recipe.recipe_description}}</p>
-   <br>
-                            <div>
-                                <ul class="list-group list-group-horizontal-md">
-                                 <li class="list-group-item font-weight-bold shadow">Category: <span class="font-weight-light">{{recipe.recipe_category}}</span></li>
-                                 <li class="list-group-item font-weight-bold shadow">Preparation Time: <span class="font-weight-light">{{recipe.recipe_time}}</span></li>
-                                <li class="list-group-item font-weight-bold shadow">Difficulty Level: <span class="font-weight-light">{{recipe.recipe_difficulty_level}}</span></li>
-                                </ul>
-                            </div>
-    <br>
-                                   <div class="container">
-                                      <div class="col-12">
-                                          
-    <!-- Users can get the edit/delete options for their own posted recipes.Otherwise users can only read the recipe and Like/Dislike-->                                      
-                                          <ul class="list-inline recipe-options"> 
-                                          
-                                          {% if recipe.recipe_author == session['name'] %}
-                                          <li class="list-inline-item stats"><a href= "{{ url_for('like', id=recipe._id) }}" data-toggle="tooltip" title="Like">{{ recipe.likes }} <i class="material-icons prefix small teal-text">thumb_up</i></a></li>
-                                          <li class="list-inline-item stats"><a href= "{{ url_for('dislike', id=recipe._id) }}" data-toggle="tooltip" title="Dislike">{{ recipe.dislikes }} <i class="material-icons prefix small teal-text">thumb_down</i></a></li>
-                                            <li class="list-inline-item"><a href= "{{ url_for('edit_recipe', id=recipe._id)}}" data-toggle="tooltip" title="Edit Recipe" href="#"><i class="material-icons prefix small teal-text">create</i></a></li>
-                                             <li class="list-inline-item"><a data-toggle="tooltip" title="Delete Recipe" href="{{ url_for('delete_recipe', id=recipe._id)}}"><i class="material-icons prefix small teal-text">delete</i></a></li>
-                                           {% else %}  
-                            
-                                           <li class="list-inline-item stats"><a href= "{{ url_for('like', id=recipe._id) }}" data-toggle="tooltip" title="Like">{{ recipe.likes }} <i class="material-icons prefix small teal-text">thumb_up</i></a></li>
-                                          <li class="list-inline-item stats"><a href= "{{ url_for('dislike', id=recipe._id) }}" data-toggle="tooltip" title="Dislike">{{ recipe.dislikes }} <i class="material-icons prefix small teal-text">thumb_down</i></a></li>
-                                           {% endif %}
-                                           </ul>
-                                      </div>
-                                      </div>
-                    <div>
-    <br>                                               
-
-                    </div>
-                    </div>
-                    </div>
-                    </div>
-    
-    <br>
-
-    <div class="container-fluid">
-  
-        <div class="row">
-            <div class="col-md-4 recipe-ingredients-header">
-              <h5>Ingredients</h5> 
-              <br>
-              <ul class="recipe-ingredients-list">
-                  {% for ingredient in recipe.recipe_ingredients %}
-                  <li><i class="material-icons prefix teal-text tiny">fiber_manual_record</i>   {{ ingredient }}</li>
-                  
-                  {% endfor %}
-              </ul>
             </div>
-            <div class="col-md-8 recipe-procedure-header">
-                <h5>Procedure</h5>
+            <div>
                 <br>
-                <dl>
-                    {% for step in recipe.recipe_procedure %}
-                    <dd><i class="material-icons prefix teal-text tiny">fiber_manual_record</i> {{ step }}</dd>
-                    <hr class="recipe-procedure-divider">
-                     {% endfor %}
-                </dl>
+
             </div>
         </div>
-        
-                
-           
-            
-    </div>          
-            
-            
+    </div>
+</div>
+
+<br>
+
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-md-4 recipe-ingredients-header">
+            <h5>Ingredients</h5>
+            <br>
+            <ul class="recipe-ingredients-list">
+                {% for ingredient in recipe.recipe_ingredients %}
+                <li><i class="material-icons prefix teal-text tiny">fiber_manual_record</i> {{ ingredient }}</li>
+
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="col-md-8 recipe-procedure-header">
+            <h5>Procedure</h5>
+            <br>
+            <dl>
+                {% for step in recipe.recipe_procedure %}
+                <dd><i class="material-icons prefix teal-text tiny">fiber_manual_record</i> {{ step }}</dd>
+                <hr class="recipe-procedure-divider"> {% endfor %}
+            </dl>
+        </div>
+    </div>
 
 
-        
-                    {% endblock %}
+
+
+</div>
+
+
+
+
+
+{% endblock %}

@@ -236,7 +236,7 @@ In order to deploy my project to Heroku I have completed the following steps:
 - Created a new branch to test deployment to heroku changing  MONGO_URI  from local to mongo atlas, changed app.run() to set debug to false.
 - Created a new project on heroku and in the deploy section linked my github repositiory with heroku in order to deploy straight from the source.
 - Configured any enviornment variables in Heroku App Settings > Config Vars such as my Secret Key, IP PORT and MONGO_URI.
-- Finalised all code, and made sure that it was production ready and ensured that my `.gitignore` was not uploading any `__pycache__`, `.env` files  or `venv` folders.
+- Finalised all code, and made sure that it was production ready and ensured that my `.gitignore` was not uploading any `.env` files  or `venv` folders.
 - Made a final commit / push to github.
 - Deployed the application from heroku admin page using linked repository and master branch.
 - The application was now fully deployed

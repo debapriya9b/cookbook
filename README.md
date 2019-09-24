@@ -1,6 +1,6 @@
 # [CookBook](https://cookbook-milestone3.herokuapp.com)
 
-<img src="https://github.com/debapriya9b/cookbook/tree/master/wireframes/Views.JPG" alt="CookBook" width="800">
+<img src="https://github.com/debapriya9b/cookbook/blob/master/wireframes/Views.JPG" alt="CookBook" width="800">
 
   
 # CookBook

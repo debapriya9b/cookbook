@@ -1,5 +1,7 @@
- 
-#### **[Live Site](https://cookbook-milestone3.herokuapp.com/)**
+# [CookBook](https://cookbook-milestone3.herokuapp.com)
+
+<img src="https://github.com/debapriya9b/cookbook/tree/master/wireframes/Views.png" alt="CookBook" width="800">
+
   
 # CookBook
 --- 

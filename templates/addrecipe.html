@@ -12,7 +12,7 @@
                     <!--By default the username will be taken as Recipe Author-->
                     {% if session['email'] != None %}
                     <i class="material-icons prefix teal-text">account_circle</i>
-                    <textarea name="recipe_author" id="recipe_author" class="materialize-textarea" required>{{ session['name'] }}</textarea>
+                    <textarea name="recipe_author" id="recipe_author" class="materialize-textarea" required disabled>{{ session['name'] }}</textarea>
                     <label for="icon_prefix">Author</label> 
                     {% else %}
 

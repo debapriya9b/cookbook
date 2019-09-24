@@ -5,16 +5,18 @@ from flask import (
     Flask, render_template, redirect, request, url_for, session, flash)
 from flask_pymongo import PyMongo, pymongo
 from bson.objectid import ObjectId
+from dotenv import load_dotenv
+from pathlib import Path  # python3 only
+env_path = Path('.') / '.env'
+load_dotenv(dotenv_path=env_path)
 
 # Declaring app name
 app = Flask(__name__)
 
 # Config settings and environmental variables
-app.config["SECRET_KEY"] = '7473f88e01ba1bf3f40ce59c38d644ff'
-
-app.config["MONGO_DBNAME"] = 'cookbook'
-app.config["MONGO_URI"] = 'mongodb+srv://debapriya9b:Chotolok10@myfirstcluster-bsyfh.mongodb.net/cookbook?retryWrites=true&w=majority'
-
+app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
+app.config["MONGO_DBNAME"] = os.getenv("MONGO_DBNAME")
+app.config["MONGO_URI"] = os.getenv("MONGO_URI")
 
 mongo = PyMongo(app)
 """
